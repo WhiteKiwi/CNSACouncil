@@ -64,3 +64,13 @@
     color: #F3B120;
 }
 
+/* button CSS */
+/* 각진 버튼 */
+.btn.btn-square {
+    border-radius: 0;
+}
+
+.btn {
+    padding-left: 90px;
+    padding-right: 90px;
+}
