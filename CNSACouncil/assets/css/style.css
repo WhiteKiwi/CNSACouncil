@@ -21,3 +21,8 @@
     margin-bottom: 15px;
 }
 
+/* main contents div */
+.main-contents > div {
+    padding: 60px;
+}
+
