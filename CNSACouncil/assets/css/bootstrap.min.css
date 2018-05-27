@@ -2426,14 +2426,20 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-secondary {
     color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d
+    /* orgin: #6c757d
+        change: #868585
+    */
+    background-color: #868585;
+    border-color: #868585
 }
 
     .btn-secondary:hover {
         color: #fff;
-        background-color: #5a6268;
-        border-color: #545b62
+        /* origin: #5a6268, #545b62
+            change: #707070
+        */
+        background-color: #707070;
+        border-color: #707070
     }
 
     .btn-secondary.focus, .btn-secondary:focus {
@@ -2554,8 +2560,11 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-danger {
     color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545
+    /* origin: #dc3545
+        change: #EB5849
+    */
+    background-color: #EB5849;
+    border-color: #EB5849
 }
 
     .btn-danger:hover {
