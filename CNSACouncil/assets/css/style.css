@@ -1,0 +1,5 @@
+﻿@media (min-width: 1200px) {
+    .navbar-collapse > .container-fluid {
+        margin-top: 45px;
+    }
+}
