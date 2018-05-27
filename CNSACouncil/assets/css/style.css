@@ -45,3 +45,9 @@
     padding: 0;
 }
 
+/* 청원 Border */
+.petition-border {
+    border: 1px solid #303030 !important;
+    padding: 40px;
+}
+
