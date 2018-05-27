@@ -25,7 +25,8 @@
 
 /* main contents div */
 .main-contents > div {
-    padding: 60px;
+    padding-top: 50px;
+    padding-right: 30px;
 }
 
 .content-div {
@@ -35,7 +36,6 @@
 
 .content-sub {
     margin-right: 40px;
-    color: #3C3C3C;
 }
 
 .content-link {

@@ -9,7 +9,7 @@
 	<!-- Main - Notice & Projects -->
 	<div class="container-fluid main-contents row color-black">
 		<!-- Notice -->
-		<div class="float-left col-md-6">
+		<div class="float-left col-md-6" style="padding-left: 60px;">
 			<hr class="hr-black" />
 			<h3>Recent Notice</h3>
 			<br />
@@ -51,7 +51,7 @@
 		</div>
 
 		<!-- Projects -->
-		<div class="float-right col-md-6">
+		<div class="float-right col-md-6" style="padding-left: 30px;">
 			<hr class="hr-black" />
 			<h3>Projects</h3>
 			<br />
