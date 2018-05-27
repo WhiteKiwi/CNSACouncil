@@ -82,4 +82,9 @@
     }
 }
 
+/* 화면이 작아지면 ~ date 아래로 내림 */
+@media (min-width: 1200px) {
+    .right-date {
+        float: left;
+    }
 }
