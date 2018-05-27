@@ -5,11 +5,18 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+	<!-- Title -->
 	<title>CSC</title>
 
+	<!-- Icon -->
+	<link rel="shortcut icon" href="/assets/img/favicon.png" />
+	
+	<!-- Bootstrap CSS Framework -->
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css?ver=0.3	">
-	<link rel="stylesheet" href="/assets/css/style.css?ver=0.2">
 
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/assets/css/style.css?ver=0.4">
+	
 	<asp:ContentPlaceHolder ID="head" runat="server">
 	</asp:ContentPlaceHolder>
 </head>

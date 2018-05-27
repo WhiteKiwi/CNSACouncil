@@ -33,13 +33,14 @@
     margin-bottom: 15px;
 }
 
-.content-date {
+.content-sub {
     margin-right: 40px;
+    color: #3C3C3C;
 }
 
 .content-link {
     font-weight: 700;
-    color: rgba(60, 60, 60, 0.8);
+    color: #3C3C3C;
 }
 
 a.content-link:hover > h5{
@@ -89,25 +90,25 @@ a.content-link:hover > h5{
 
 .petition-border-content {
     margin-left: 30px;
-    color: #707070;
+    color: #707070; 
 }
 
 
 /* color CSS */
 .color-gray {
-    color: #868585;
+    color: #868585 !important;
 }
 
 .color-black {
-    color: #3C3C3C;
+    color: #3C3C3C !important;
 }
 
 .color-red {
-    color: #EB5849;
+    color: #EB5849 !important;
 }
 
 .color-gold {
-    color: #F3B120;
+    color: #F3B120 !important;
 }
 
 
