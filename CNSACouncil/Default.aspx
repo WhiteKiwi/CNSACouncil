@@ -107,10 +107,10 @@
 				</div>
 				<div class="col-md-1"></div>
 				<div class="col-md-4 color-black">
-					<h6>등록인 :  최모양</h6>
-					<h6 class="color-gold">동의 인원 :  99명</h6>
-					<h6 class="right-date">등록 기간 :  2018-05-26</h6>
-					<h6>&nbsp;~ 2018-06-26</h6>
+					<h5>등록인 :  최모양</h5>
+					<h5 class="color-gold">동의 인원 :  99명</h5>
+					<h5 class="right-date">등록 기간 :  2018-05-26</h5>
+					<h5>&nbsp;~ 2018-06-26</h5>
 					<br />
 					<a href="/" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
 				</div>
@@ -127,10 +127,10 @@
 				</div>
 				<div class="col-md-1"></div>
 				<div class="col-md-4 color-black">
-					<h6>등록인 :  최모양</h6>
-					<h6 class="color-gold">동의 인원 :  99명</h6>
-					<h6 class="right-date">등록 기간 :  2018-05-26</h6>
-					<h6>&nbsp;~ 2018-06-26</h6>
+					<h5>등록인 :  최모양</h5>
+					<h5 class="color-gold">동의 인원 :  99명</h5>
+					<h5 class="right-date">등록 기간 :  2018-05-26</h5>
+					<h5>&nbsp;~ 2018-06-26</h5>
 					<br />
 					<a href="/" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
 				</div>
