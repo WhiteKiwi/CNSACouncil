@@ -70,7 +70,16 @@
     border-radius: 0;
 }
 
-.btn {
-    padding-left: 90px;
-    padding-right: 90px;
+@media (max-width: 1199.98px) {
+    .btn-long {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .btn-long {
+        width: 75%;
+    }
+}
+
 }
