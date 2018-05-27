@@ -51,3 +51,16 @@
     padding: 40px;
 }
 
+/* color CSS */
+.color-gray {
+    color: #868585;
+}
+
+.color-red {
+    color: #EB5849;
+}
+
+.color-gold {
+    color: #F3B120;
+}
+
