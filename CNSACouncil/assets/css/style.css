@@ -1,5 +1,16 @@
-﻿@media (min-width: 1200px) {
+﻿/* navbar CSS */
+@media (min-width: 1200px) {
     .navbar-collapse > .container-fluid {
         margin-top: 45px;
     }
 }
+
+.navbar-brand {
+    margin-left: 70px;
+}
+
+    .navbar-brand > img {
+        height: 85px;
+        width: 251px;
+    }
+
