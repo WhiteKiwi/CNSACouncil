@@ -14,6 +14,7 @@
         width: 251px;
     }
 
+
 /* 페이지 상단 TopLine */
 .top-line {
     height: 12px;
@@ -21,10 +22,31 @@
     margin-bottom: 15px;
 }
 
+
 /* main contents div */
 .main-contents > div {
     padding: 60px;
 }
+
+.content-div {
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.content-date {
+    margin-right: 40px;
+}
+
+.content-link {
+    font-weight: 700;
+    color: rgba(60, 60, 60, 0.8);
+}
+
+a.content-link:hover > h5{
+    color: #3C3C3C;
+    text-decoration: underline;
+}
+
 
 /* hr CSS */
 .hr-gray {
@@ -32,6 +54,15 @@
     height: 1px;
     border: 0;
     border-top: 1px solid #707070;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.hr-black {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #3C3C3C;
     margin: 1em 0;
     padding: 0;
 }
@@ -45,15 +76,30 @@
     padding: 0;
 }
 
+
 /* 청원 Border */
 .petition-border {
     border: 1px solid #303030 !important;
-    padding: 40px;
+    padding: 50px;
 }
+
+.petition-border-title {
+    color: #3C3C3C;
+}
+
+.petition-border-content {
+    margin-left: 30px;
+    color: #707070;
+}
+
 
 /* color CSS */
 .color-gray {
     color: #868585;
+}
+
+.color-black {
+    color: #3C3C3C;
 }
 
 .color-red {
@@ -64,23 +110,26 @@
     color: #F3B120;
 }
 
+
 /* button CSS */
 /* 각진 버튼 */
 .btn.btn-square {
     border-radius: 0;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1319.98px) {
     .btn-long {
         width: 100%;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1320px) {
     .btn-long {
-        width: 75%;
+        padding-left: 120px;
+        padding-right: 120px;
     }
 }
+
 
 /* 화면이 작아지면 ~ date 아래로 내림 */
 @media (min-width: 1200px) {
