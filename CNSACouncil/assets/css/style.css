@@ -14,3 +14,10 @@
         width: 251px;
     }
 
+/* 페이지 상단 TopLine */
+.top-line {
+    height: 12px;
+    background-color: #707070;
+    margin-bottom: 15px;
+}
+
