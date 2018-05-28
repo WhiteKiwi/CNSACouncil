@@ -43,7 +43,24 @@
     color: #3C3C3C;
 }
 
-a.content-link:hover > h5{
+@media (max-width: 1199.98px) {
+    .content-link.notice > h5 {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
+        width: 200px;
+        overflow: hidden;
+    }
+    .content-link.project > h5 {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
+        width: 270px;
+        overflow: hidden;
+    }
+}
+
+a.content-link:hover > h5 {
     color: #3C3C3C;
     text-decoration: underline;
 }
@@ -90,7 +107,7 @@ a.content-link:hover > h5{
 
 .petition-border-content {
     margin-left: 30px;
-    color: #707070; 
+    color: #707070;
 }
 
 
