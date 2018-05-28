@@ -22,7 +22,7 @@
 </head>
 <body>
 	<div class="top-line"></div>
-	<nav class="navbar navbar-expand-xl navbar-light bg-white">
+	<nav class="navbar navbar-expand-xl navbar-light bg-white sticky-top border-bottom border-secondary">
 		<a class="navbar-brand" href="/">
 			<img src="/assets/img/Logo.png" /></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 20px;">
