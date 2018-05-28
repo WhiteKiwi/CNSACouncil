@@ -14,35 +14,35 @@
 			<h3>Recent Notice</h3>
 			<br />
 			<div class="w-100 content-div">
-				<a href="/" class="content-link">
+				<a href="/" class="content-link notice">
 					<h5 class="float-left">안녕하세요 5대 학생회 입니다.</h5>
 				</a>
 				<h5 class="float-right content-sub">2018-05-26</h5>
 			</div>
 			<br />
 			<div class="w-100 content-div">
-				<a href="/" class="content-link">
+				<a href="/" class="content-link notice">
 					<h5 class="float-left">안녕하세요 5대 학생회 입니다.</h5>
 				</a>
 				<h5 class="float-right content-sub">2018-05-26</h5>
 			</div>
 			<br />
 			<div class="w-100 content-div">
-				<a href="/" class="content-link">
+				<a href="/" class="content-link notice">
 					<h5 class="float-left">안녕하세요 5대 학생회 입니다.</h5>
 				</a>
 				<h5 class="float-right content-sub">2018-05-26</h5>
 			</div>
 			<br />
 			<div class="w-100 content-div">
-				<a href="/" class="content-link">
+				<a href="/" class="content-link notice">
 					<h5 class="float-left">안녕하세요 5대 학생회 입니다.</h5>
 				</a>
 				<h5 class="float-right content-sub">2018-05-26</h5>
 			</div>
 			<br />
 			<div class="w-100 content-div">
-				<a href="/" class="content-link">
+				<a href="/" class="content-link notice">
 					<h5 class="float-left">안녕하세요 5대 학생회 입니다.</h5>
 				</a>
 				<h5 class="float-right content-sub">2018-05-26</h5>
@@ -56,35 +56,35 @@
 			<h3>Projects</h3>
 			<br />
 			<div class="w-100 content-div">
-				<a href="/" class="content-link">
+				<a href="/" class="content-link project">
 					<h5 class="float-left">학생회 홈페이지 제작 (2018-05-26~)</h5>
 				</a>
 				<h5 class="float-right content-sub color-gold">진행중</h5>
 			</div>
 			<br />
 			<div class="w-100 content-div">
-				<a href="/" class="content-link">
+				<a href="/" class="content-link project">
 					<h5 class="float-left">MSMP 사업 (2018-05-26~)</h5>
 				</a>
 				<h5 class="float-right content-sub">진행완료</h5>
 			</div>
 			<br />
 			<div class="w-100 content-div">
-				<a href="/" class="content-link">
+				<a href="/" class="content-link project">
 					<h5 class="float-left">학생회 홈페이지 제작 (2018-05-26~)</h5>
 				</a>
 				<h5 class="float-right content-sub color-gold">진행중</h5>
 			</div>
 			<br />
 			<div class="w-100 content-div">
-				<a href="/" class="content-link">
+				<a href="/" class="content-link project">
 					<h5 class="float-left">MSMP 사업 (2018-05-26~)</h5>
 				</a>
 				<h5 class="float-right content-sub">진행완료</h5>
 			</div>
 			<br />
 			<div class="w-100 content-div">
-				<a href="/" class="content-link">
+				<a href="/" class="content-link project">
 					<h5 class="float-left">학생회 홈페이지 제작 (2018-05-26~)</h5>
 				</a>
 				<h5 class="float-right content-sub color-gold">진행중</h5>
