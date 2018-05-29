@@ -3,6 +3,31 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
+	<!-- Top Image -->
+	<img src="/assets/img/background-long.png" style="width: 100%;" />
+
+	<!-- Petition 분류 선택 -->
+	<% 
+		string[] order = { "", "", "", "" };
+		if (Request.QueryString["order"] == "best") {
+			order[1] = " active";
+		} else if (Request.QueryString["order"] == "finished") {
+			order[2] = " active";
+		} else if (Request.QueryString["order"] == "answer") {
+			order[3] = " active";
+		} else {
+			order[0] = " active";
+		}
+	   %>
+	<div>
+		<ul class="petition-tab border-bottom">
+			<li class="border-right<%=order[0]%>"><a href="/Petitions.aspx">최신순</a></li>
+			<li class="border-right<%=order[1]%>"><a href="/Petitions.aspx?order=best">참여순</a></li>
+			<li class="border-right<%=order[2]%>"><a href="/Petitions.aspx?order=finished">만료된 청원</a></li>
+			<li class="<%=order[3]%>"><a href="/Petitions.aspx?order=answer">답변된 청원</a></li>
+		</ul>
+	</div>
+
 	<script>
 		document.getElementById("nav3").classList.add("active");
 		document.getElementById("nav3").classList.add("active");
