@@ -98,12 +98,12 @@
 		<hr class="hr-red" />
 		<h3 class="color-red">Hot Issues</h3>
 		<br />
-		<div class="petition-border">
+		<div class="petition-box">
 			<div class="row">
 				<div class="col-md-7 color-black">
-					<h3 class="petition-border-title"><b>이거 진짜 바뀌어야 할 것 같지 않아요?</b></h3>
+					<h3 class="petition-box-title"><b>이거 진짜 바뀌어야 할 것 같지 않아요?</b></h3>
 					<br />
-					<h5 class="petition-border-content"><b>그쵸? 동의?</b></h5>
+					<h5 class="petition-box-content"><b>그쵸? 동의?</b></h5>
 				</div>
 				<div class="col-md-1"></div>
 				<div class="col-md-4 color-black">
@@ -118,12 +118,12 @@
 		</div>
 		<br />
 		<br />
-		<div class="petition-border">
+		<div class="petition-box">
 			<div class="row">
 				<div class="col-md-7 color-black">
-					<h3 class="petition-border-title"><b>이거 진짜 바뀌어야 할 것 같지 않아요?</b></h3>
+					<h3 class="petition-box-title"><b>이거 진짜 바뀌어야 할 것 같지 않아요?</b></h3>
 					<br />
-					<h5 class="petition-border-content"><b>그쵸? 동의?</b></h5>
+					<h5 class="petition-box-content"><b>그쵸? 동의?</b></h5>
 				</div>
 				<div class="col-md-1"></div>
 				<div class="col-md-4 color-black">
@@ -140,7 +140,7 @@
 		<br />
 		<br />
 		<div class="w-100 text-center">
-			<a href="/" class="btn btn-lg btn-danger btn-square" role="button" style="padding-left: 90px; padding-right: 90px;">이슈 등록하기</a>
+			<a href="/" class="btn btn-lg btn-danger btn-square" role="button" style="padding-left: 90px; padding-right: 90px;">지금 청원하기</a>
 		</div>
 		<br />
 	</div>
