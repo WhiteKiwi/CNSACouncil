@@ -74,10 +74,11 @@
     <Content Include="assets\img\favicon.png" />
     <Content Include="assets\img\Logo.png" />
     <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\common.js" />
     <Content Include="assets\js\jquery-3.3.1.slim.min.js" />
     <Content Include="assets\js\popper.min.js" />
     <Content Include="Default.aspx" />
-    <Content Include="Issues.aspx" />
+    <Content Include="Petitions.aspx" />
     <Content Include="masters\Students.Master" />
     <Content Include="masters\Admins.Master" />
     <None Include="packages.config" />
@@ -109,12 +110,12 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Issues.aspx.cs">
-      <DependentUpon>Issues.aspx</DependentUpon>
+    <Compile Include="Petitions.aspx.cs">
+      <DependentUpon>Petitions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Issues.aspx.designer.cs">
-      <DependentUpon>Issues.aspx</DependentUpon>
+    <Compile Include="Petitions.aspx.designer.cs">
+      <DependentUpon>Petitions.aspx</DependentUpon>
     </Compile>
     <Compile Include="masters\Admins.Master.cs">
       <DependentUpon>Admins.Master</DependentUpon>
