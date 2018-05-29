@@ -10,6 +10,6 @@
 namespace CNSACouncil {
     
     
-    public partial class Issues {
+    public partial class Petitions {
     }
 }
