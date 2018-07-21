@@ -18,7 +18,8 @@
 		} else {
 			order[0] = " active";
 		}
-	   %>
+	%>
+	<!-- Petition Tab -->
 	<div>
 		<ul class="petition-tab border-bottom">
 			<li class="border-right<%=order[0]%>"><a href="/Petitions.aspx">최신순</a></li>
@@ -28,8 +29,8 @@
 		</ul>
 	</div>
 
+	<!-- Navbar - Petition -->
 	<script>
-		document.getElementById("nav3").classList.add("active");
 		document.getElementById("nav3").classList.add("active");
 	</script>
 </asp:Content>

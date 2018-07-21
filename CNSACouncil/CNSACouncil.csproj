@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Notice.aspx" />
+    <Content Include="Suggest.aspx" />
     <Content Include="Projects.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -123,8 +124,15 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="managers\NoticeManager.cs" />
+    <Compile Include="managers\ProjectManager.cs" />
+    <Compile Include="managers\UserManager.cs" />
+    <Compile Include="managers\SuggestionManager.cs" />
     <Compile Include="managers\PetitionManager.cs" />
     <Compile Include="models\Agree.cs" />
+    <Compile Include="models\Project.cs" />
+    <Compile Include="models\Notice.cs" />
+    <Compile Include="models\User.cs" />
+    <Compile Include="models\Suggestion.cs" />
     <Compile Include="models\Petition.cs" />
     <Compile Include="Petitions.aspx.cs">
       <DependentUpon>Petitions.aspx</DependentUpon>
@@ -153,6 +161,13 @@
     </Compile>
     <Compile Include="Notice.aspx.designer.cs">
       <DependentUpon>Notice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suggest.aspx.cs">
+      <DependentUpon>Suggest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Suggest.aspx.designer.cs">
+      <DependentUpon>Suggest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Projects.aspx.cs">
       <DependentUpon>Projects.aspx</DependentUpon>
