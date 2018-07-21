@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
 namespace CNSACouncil.Models {
-	public static class SuggestionManager {
+	public static class ProjectManager {
 		// Table Name
-		private const string SUGGESTIONS = "suggestions";
+		private const string PROJECTS = "projects";
 	}
 }
