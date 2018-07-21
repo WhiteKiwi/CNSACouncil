@@ -15,6 +15,22 @@
 		</ul>
 	</div>
 
+	<div class="container-fluid text-center">
+		<!-- Notice box -->
+		<div class="border-box-red">
+			<h3 class="color-red"><b>건의 시 주의사항</b></h3>
+		</div>
+
+		<!-- Suggest box -->
+		<form runat="server" style="margin: 30px 50px 30px 50px;">
+			<asp:TextBox ID="Content" runat="server" Rows="20" CssClass="w-100" TextMode="MultiLine"></asp:TextBox>
+			<br />
+			<br />
+
+			<asp:Button runat="server" ID="SuggestButton" CssClass="btn btn-lg btn-warning btn-square w-25" Text="건의하기" OnClick="SuggestButton_Click" />
+		</form>
+	</div>
+
 	<!-- Navbar - 학생회 사업 -->
 	<script>
 		document.getElementById("nav4").classList.add("active");
