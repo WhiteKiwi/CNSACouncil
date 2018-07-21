@@ -21,11 +21,11 @@
 	%>
 	<!-- Petition Tab -->
 	<div>
-		<ul class="petition-tab border-bottom">
-			<li class="border-right<%=order[0]%>"><a href="/Petitions.aspx">최신순</a></li>
-			<li class="border-right<%=order[1]%>"><a href="/Petitions.aspx?order=best">참여순</a></li>
-			<li class="border-right<%=order[2]%>"><a href="/Petitions.aspx?order=finished">만료된 청원</a></li>
-			<li class="<%=order[3]%>"><a href="/Petitions.aspx?order=answer">답변된 청원</a></li>
+		<ul class="selection-tab border-bottom">
+			<li class="border-right<%=order[0]%> w-25"><a href="/Petitions.aspx">최신순</a></li>
+			<li class="border-right<%=order[1]%> w-25"><a href="/Petitions.aspx?order=best">참여순</a></li>
+			<li class="border-right<%=order[2]%> w-25"><a href="/Petitions.aspx?order=finished">만료된 청원</a></li>
+			<li class="<%=order[3]%> w-25"><a href="/Petitions.aspx?order=answer">답변된 청원</a></li>
 		</ul>
 	</div>
 

@@ -17,10 +17,10 @@
 	%>
 	<!-- Project Tab -->
 	<div>
-		<ul class="project-tab border-bottom">
-			<li class="border-right<%=order[0]%>"><a href="/Projects.aspx">진행중인 사업</a></li>
-			<li class="border-right<%=order[1]%>"><a href="/Projects.aspx?state=finished">완료된 사업</a></li>
-			<li><a href="/Suggest.aspx">건의하기</a></li>
+		<ul class="selection-tab border-bottom">
+			<li class="border-right<%=order[0]%>" style="width: 33.3%;"><a href="/Projects.aspx">진행중인 사업</a></li>
+			<li class="border-right<%=order[1]%>" style="width: 33.3%;"><a href="/Projects.aspx?state=finished">완료된 사업</a></li>
+			<li style="width: 33.3%;"><a href="/Suggest.aspx">건의하기</a></li>
 		</ul>
 	</div>
 

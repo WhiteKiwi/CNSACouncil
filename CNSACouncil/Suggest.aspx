@@ -8,10 +8,10 @@
 
 	<!-- Project Tab -->
 	<div>
-		<ul class="project-tab border-bottom">
-			<li class="border-right"><a href="/Projects.aspx">진행중인 사업</a></li>
-			<li class="border-right"><a href="/Projects.aspx?state=finished">완료된 사업</a></li>
-			<li class="active"><a href="/Suggest.aspx">건의하기</a></li>
+		<ul class="selection-tab border-bottom">
+			<li class="border-right" style="width: 33.3%;"><a href="/Projects.aspx">진행중인 사업</a></li>
+			<li class="border-right" style="width: 33.3%;"><a href="/Projects.aspx?state=finished">완료된 사업</a></li>
+			<li class="active" style="width: 33.3%;"><a href="/Suggest.aspx">건의하기</a></li>
 		</ul>
 	</div>
 
