@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 
-namespace CNSACouncil.Models {
+namespace CNSACouncil.Managers {
 	public static class UserManager {
 		// Table Name
 		private const string USERS = "users";
