@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using CNSACouncil.Models;
+﻿using CNSACouncil.Models;
 using MySql.Data.MySqlClient;
 
 namespace CNSACouncil.Managers {
