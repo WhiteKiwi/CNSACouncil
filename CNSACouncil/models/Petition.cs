@@ -15,6 +15,8 @@ namespace CNSACouncil.Models {
 
 		public DateTime PetitionAt { get; set; } // 청원 시각
 
-		public int Views { get; set; }  // 조회수
+		public int State { get; set; } // 청원 상태 - 0: 미승인, 1: 승인, 2: 답변됨, 3: 만료됨
+
+		public int Views { get; set; } // 조회수
 	}
 }
