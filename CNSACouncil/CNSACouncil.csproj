@@ -77,6 +77,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Notice.aspx" />
     <Content Include="Timeline.aspx" />
     <Content Include="AboutUs.aspx" />
     <Content Include="assets\css\bootstrap.min.css" />
@@ -104,12 +105,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Notice.aspx" />
+    <Content Include="Notices.aspx" />
     <Content Include="Suggest.aspx" />
     <Content Include="Projects.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Notice.aspx.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notice.aspx.designer.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Timeline.aspx.cs">
       <DependentUpon>Timeline.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -163,12 +171,12 @@
     <Compile Include="masters\Students.Master.designer.cs">
       <DependentUpon>Students.Master</DependentUpon>
     </Compile>
-    <Compile Include="Notice.aspx.cs">
-      <DependentUpon>Notice.aspx</DependentUpon>
+    <Compile Include="Notices.aspx.cs">
+      <DependentUpon>Notices.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Notice.aspx.designer.cs">
-      <DependentUpon>Notice.aspx</DependentUpon>
+    <Compile Include="Notices.aspx.designer.cs">
+      <DependentUpon>Notices.aspx</DependentUpon>
     </Compile>
     <Compile Include="Suggest.aspx.cs">
       <DependentUpon>Suggest.aspx</DependentUpon>

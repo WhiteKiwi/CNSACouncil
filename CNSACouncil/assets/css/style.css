@@ -102,8 +102,14 @@ a.content-link:hover > h5 {
 	padding: 50px;
 }
 
-.petition-box-gold {
+.border-box-gold {
 	border: 1px solid #F3B120;
+	margin: 30px 50px 30px 50px;
+	padding: 30px;
+}
+
+.border-box-red {
+	border: 1px solid #EB5849;
 	margin: 30px 50px 30px 50px;
 	padding: 30px;
 }
