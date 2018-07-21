@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/Students.Master" AutoEventWireup="true" CodeBehind="AboutUs.aspx.cs" Inherits="CNSACouncil.AboutUs" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/Students.Master" AutoEventWireup="true" CodeBehind="Timeline.aspx.cs" Inherits="CNSACouncil.Timeline" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -9,8 +9,8 @@
 	<!-- About Us Tab -->
 	<div>
 		<ul class="selection-tab border-bottom">
-			<li class="border-right w-50 active"><a href="/AboutUs.aspx">학생회 소개</a></li>
-			<li class="w-50"><a href="/TimeLine.aspx">TIMELINE</a></li>
+			<li class="border-right w-50"><a href="/AboutUs.aspx">학생회 소개</a></li>
+			<li class="w-50 active"><a href="/TimeLine.aspx">TIMELINE</a></li>
 		</ul>
 	</div>
 
