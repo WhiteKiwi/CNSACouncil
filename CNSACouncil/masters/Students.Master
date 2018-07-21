@@ -37,7 +37,7 @@
 						</a>
 					</li>
 					<li id="nav2" class="nav-item">
-						<a class="nav-link" href="/Notice.aspx">
+						<a class="nav-link" href="/Notices.aspx">
 							<h5>Notice</h5>
 						</a>
 					</li>
