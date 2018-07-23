@@ -77,6 +77,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\FileUpload.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="Notice.aspx" />
     <Content Include="Timeline.aspx" />
     <Content Include="AboutUs.aspx" />
@@ -111,6 +114,29 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\FileUpload.aspx.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\FileUpload.aspx.designer.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="models\Counsel.cs" />
+    <Compile Include="models\Story.cs" />
     <Compile Include="Notice.aspx.cs">
       <DependentUpon>Notice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -141,13 +167,11 @@
     </Compile>
     <Compile Include="managers\NoticeManager.cs" />
     <Compile Include="managers\ProjectManager.cs" />
-    <Compile Include="managers\UserManager.cs" />
     <Compile Include="managers\SuggestionManager.cs" />
     <Compile Include="managers\PetitionManager.cs" />
     <Compile Include="models\Agree.cs" />
     <Compile Include="models\Project.cs" />
     <Compile Include="models\Notice.cs" />
-    <Compile Include="models\User.cs" />
     <Compile Include="models\Suggestion.cs" />
     <Compile Include="models\Petition.cs" />
     <Compile Include="Petitions.aspx.cs">
