@@ -12,5 +12,7 @@ namespace CNSACouncil.Models {
 		public string IP { get; set; } // 건의자 IP
 
 		public DateTime SuggestAt { get; set; } // 건의 시각
+		
+		public int State { get; set; } // 건의 상태 - 0: 안읽음, 1: 읽음
 	}
 }
