@@ -64,6 +64,11 @@
 
 	<asp:ContentPlaceHolder ID="Contents" runat="server">
 	</asp:ContentPlaceHolder>
+	
+
+	<footer>
+		<span>Copyright © 2018 Copyright CNSA Student Council All Rights Reserved</span>
+	</footer>
 
 	<script src="/assets/js/jquery-3.3.1.slim.min.js"></script>
 	<script src="/assets/js/popper.min.js"></script>
