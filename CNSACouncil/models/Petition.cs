@@ -7,6 +7,8 @@ namespace CNSACouncil.Models {
 	public class Petition {
 		public int ID { get; set; } // 청원 일련번호
 
+		public string UserID { get; set; } // 청원자 CNSAnet ID
+
 		public string Title { get; set; } // 청원 제목
 
 		public string Content { get; set; } // 청원 내용
@@ -15,7 +17,7 @@ namespace CNSACouncil.Models {
 
 		public DateTime PetitionAt { get; set; } // 청원 시각
 
-		public int State { get; set; } // 청원 상태 - 0: 미승인, 1: 승인, 2: 답변됨, 3: 만료됨
+		public int State { get; set; } // 청원 상태 - 0: 미승인, 1: 승인, 2: 답변됨
 
 		public int Views { get; set; } // 조회수
 	}
