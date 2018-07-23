@@ -139,10 +139,6 @@
 		<br />
 		<br />
 		<br />
-		<div class="w-100 text-center">
-			<a href="/" class="btn btn-lg btn-danger btn-square" role="button" style="padding-left: 90px; padding-right: 90px;">지금 청원하기</a>
-		</div>
-		<br />
 	</div>
 
 	<!-- Navbar - HOME -->
