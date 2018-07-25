@@ -98,5 +98,22 @@ namespace CNSACouncil.Managers {
 			}
 		}
 
+		/// <summary>
+		/// ID를 받아 지난 건의로 이동시키는 함수
+		/// </summary>
+		/// <param name="ID">건의 일련번호</param>  
+		/// <see cref="Suggestion"/>
+		public static void SuggestionCheck(string ID) {
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Update Suggestion State
+				string sql = "UPDATE suggestions SET State='1' WHERE ID='" + ID + "';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				cmd.ExecuteNonQuery();
+
+				conn.Close();
+			}
+		}
 	}
 }
