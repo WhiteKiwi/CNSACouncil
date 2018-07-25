@@ -34,7 +34,7 @@
 				<ul class="navbar-nav float-right">
 					<li id="nav1" class="nav-item">
 						<a class="nav-link" href="/admin/UploadNotice.aspx">
-							<h5><b>공지 등록</b></h5>
+							<h5><b>공지 관리</b></h5>
 						</a>
 					</li>
 					<li id="nav2" class="nav-item">
