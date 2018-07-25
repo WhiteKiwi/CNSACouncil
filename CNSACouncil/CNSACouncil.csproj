@@ -493,6 +493,7 @@
     <Content Include="assets\ckeditor\skins\moono-lisa\images\refresh.png" />
     <Content Include="assets\ckeditor\skins\moono-lisa\images\spinner.gif" />
     <Content Include="assets\ckeditor\styles.js" />
+    <Content Include="assets\img\CommingSoon.png" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Notice.aspx" />

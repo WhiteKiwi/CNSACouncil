@@ -29,6 +29,18 @@
 		</ul>
 	</div>
 
+	<!-- Notice box -->
+	<div class="border-box-gold text-center">
+		<h3>청원게시판은 5대 학생회의 공약 중 하나로 학생들의 여론을 빠르게 수렴하기 위해 만들어졌습니다.</h3>
+		<br />
+		<a href="/" class="btn btn-lg btn-warning btn-square w-25" role="button">지금 청원하기</a>
+	</div>
+
+	<!-- Comming Soon -->
+	<div class="text-center p-5 petition-box" style="margin: 50px;">
+		<img src="/assets/img/CommingSoon.png" width="600" />
+	</div>
+
 	<!-- Navbar - Petition -->
 	<script>
 		document.getElementById("nav3").classList.add("active");

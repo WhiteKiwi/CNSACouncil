@@ -23,6 +23,11 @@
 			<li style="width: 33.3%;"><a href="/Suggest.aspx">건의하기</a></li>
 		</ul>
 	</div>
+	
+	<!-- Comming Soon -->
+	<div class="text-center p-5 petition-box" style="margin: 50px;">
+		<img src="/assets/img/CommingSoon.png" width="600" />
+	</div>
 
 	<!-- Navbar - 학생회 사업 -->
 	<script>

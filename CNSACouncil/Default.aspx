@@ -136,9 +136,11 @@
 				</div>
 			</div>
 		</div>
-		<br />
-		<br />
-		<br />
+	</div>
+
+	<!-- Comming Soon -->
+	<div class="text-center p-5 petition-box" style="margin: 60px;">
+		<img src="/assets/img/CommingSoon.png" width="600" />
 	</div>
 
 	<!-- Navbar - HOME -->
