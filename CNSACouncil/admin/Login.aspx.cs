@@ -27,11 +27,11 @@ namespace CNSACouncil.admin {
 						Response.Redirect("/admin/");
 					} else {
 						// 패스워드 불일치
-						Response.Write("<script>alert('Password를 확인해주세요');</script>");
+						Response.Write("<script>alert('Password를 확인해주세요.');</script>");
 					}
 				} else {
 					// 해당하는 ID가 존재하지 않을 경우
-					Response.Write("<script>alert('ID를 확인해주세요');</script>");
+					Response.Write("<script>alert('ID를 확인해주세요.');</script>");
 				}
 
 				// Connection Close
