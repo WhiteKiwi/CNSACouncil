@@ -263,3 +263,10 @@ footer {
 		width: 200px;
 	}
 
+/* 건의 내용 */
+.suggestion-content {
+	margin-top: 1rem;
+	margin-bottom: -1rem;
+	background-color: #F5F5F5;
+	padding: 30px;
+}
