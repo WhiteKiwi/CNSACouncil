@@ -494,6 +494,7 @@
     <Content Include="assets\ckeditor\skins\moono-lisa\images\spinner.gif" />
     <Content Include="assets\ckeditor\styles.js" />
     <Content Include="assets\img\CommingSoon.png" />
+    <Content Include="assets\img\CSC.png" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Notice.aspx" />
@@ -502,8 +503,6 @@
     <Content Include="assets\img\background-long.png" />
     <Content Include="assets\img\background.jpg" />
     <Content Include="assets\img\CNSA.png" />
-    <Content Include="assets\img\CSC-gold.png" />
-    <Content Include="assets\img\CSC.png" />
     <Content Include="assets\img\Logo.png" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\jquery-3.3.1.slim.min.js" />

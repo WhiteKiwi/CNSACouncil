@@ -15,13 +15,13 @@
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css?ver=0.3">
 
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="/assets/css/style.css?ver=0.5">
+	<link rel="stylesheet" href="/assets/css/style.css?ver=0.6">
 	
 	<asp:ContentPlaceHolder ID="head" runat="server">
 	</asp:ContentPlaceHolder>
 </head>
 <body>
-	<div class="top-line"></div>
+	<div class="top-bar text-right"><%if (Session["UserID"] != null) { Response.Write("<a href=\"/Logout.aspx\">Logout</a>"); } else { Response.Write("<a href=\"/Login.aspx\">Login</a>"); } %></div>
 	<nav class="navbar navbar-expand-xl navbar-light bg-white sticky-top border-bottom border-secondary">
 		<a class="navbar-brand" href="/">
 			<img src="/assets/img/Logo.png" /></a>
@@ -61,13 +61,12 @@
 		</div>
 	</nav>
 
-
 	<asp:ContentPlaceHolder ID="Contents" runat="server">
 	</asp:ContentPlaceHolder>
-	
 
+	<!-- Copyright -->
 	<footer>
-		<span>Copyright © 2018 Copyright CNSA Student Council All Rights Reserved</span>
+		<span>Copyright © 2018 Copyright 5th CNSA Student Council All Rights Reserved</span>
 	</footer>
 
 	<script src="/assets/js/jquery-3.3.1.slim.min.js"></script>

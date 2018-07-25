@@ -3,7 +3,10 @@
 namespace CNSACouncil {
 	public partial class Logout : System.Web.UI.Page {
 		protected void Page_Load(object sender, EventArgs e) {
-			// TODO: 로그인 세션 삭제
+			// Sesstion 삭제
+			Session["UserID"] = null;
+			// 메인 화면으로 Redirect
+			Response.Redirect("/");
 		}
 	}
 }
