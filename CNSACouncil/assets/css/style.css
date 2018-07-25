@@ -203,3 +203,15 @@ ol, ul, li {
 	padding: 0;
 	list-style: none;
 }
+
+/* footer */
+footer {
+	text-align: center;
+	background-color: #5B5B5B;
+	height: 50px;
+}
+
+	footer > span {
+		color: white;
+		line-height: 50px;
+	}
