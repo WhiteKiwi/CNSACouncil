@@ -78,6 +78,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\FileUpload.aspx" />
+    <Content Include="admin\Login.aspx" />
+    <Content Include="admin\Logout.aspx" />
     <Content Include="admin\UploadNotice.aspx" />
     <Content Include="assets\ckeditor\adapters\jquery.js" />
     <Content Include="assets\ckeditor\build-config.js" />
@@ -548,6 +550,24 @@
     </Compile>
     <Compile Include="admin\FileUpload.aspx.designer.cs">
       <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\UploadNotice.aspx.cs">
+      <DependentUpon>UploadNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
