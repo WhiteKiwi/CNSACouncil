@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css?ver=0.3">
 
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="/assets/css/style.css?ver=0.6">
+	<link rel="stylesheet" href="/assets/css/style.css?ver=0.7">
 
 	<asp:ContentPlaceHolder ID="head" runat="server">
 	</asp:ContentPlaceHolder>

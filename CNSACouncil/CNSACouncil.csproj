@@ -83,6 +83,7 @@
     <Content Include="admin\Logout.aspx" />
     <Content Include="admin\PetitionManagement.aspx" />
     <Content Include="admin\ProjectManagement.aspx" />
+    <Content Include="admin\SuggestionCheck.aspx" />
     <Content Include="admin\SuggestionManagement.aspx" />
     <Content Include="admin\UploadNotice.aspx" />
     <Content Include="assets\ckeditor\adapters\jquery.js" />
@@ -589,6 +590,13 @@
     </Compile>
     <Compile Include="admin\ProjectManagement.aspx.designer.cs">
       <DependentUpon>ProjectManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SuggestionCheck.aspx.cs">
+      <DependentUpon>SuggestionCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\SuggestionCheck.aspx.designer.cs">
+      <DependentUpon>SuggestionCheck.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\SuggestionManagement.aspx.cs">
       <DependentUpon>SuggestionManagement.aspx</DependentUpon>
