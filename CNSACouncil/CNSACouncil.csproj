@@ -496,7 +496,6 @@
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Notice.aspx" />
-    <Content Include="Timeline.aspx" />
     <Content Include="assets\css\bootstrap.min.css" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\img\background-long.png" />
@@ -572,13 +571,6 @@
     </Compile>
     <Compile Include="Notice.aspx.designer.cs">
       <DependentUpon>Notice.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Timeline.aspx.cs">
-      <DependentUpon>Timeline.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Timeline.aspx.designer.cs">
-      <DependentUpon>Timeline.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
