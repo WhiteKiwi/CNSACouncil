@@ -5,19 +5,72 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	
-	<title>CSC Admin</title>
+	<!-- Title -->
+	<title>충남삼성고등학교 학생회 - 관리자</title>
 	
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<!-- Icon -->
+	<link rel="shortcut icon" href="/assets/img/CSC.png" />
 	
+	<!-- Bootstrap CSS Framework -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css?ver=0.3">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/assets/css/style.css?ver=0.6">
+
 	<asp:ContentPlaceHolder ID="head" runat="server">
 	</asp:ContentPlaceHolder>
 </head>
 <body>
+	<div class="top-bar text-right"><a href="/admin/Logout.aspx">로그아웃</a></div>
+
+	<nav class="navbar navbar-expand-xl navbar-light bg-white sticky-top border-bottom border-secondary">
+		<a class="navbar-brand" href="/admin/">
+			<img src="/assets/img/Logo.png" /></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 20px;">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<div class="container-fluid">
+				<ul class="navbar-nav float-right">
+					<li id="nav1" class="nav-item">
+						<a class="nav-link" href="/admin/UploadNotice.aspx">
+							<h5><b>공지 등록</b></h5>
+						</a>
+					</li>
+					<li id="nav2" class="nav-item">
+						<a class="nav-link" href="/admin/SuggestionManagement.aspx">
+							<h5><b>건의함</b></h5>
+						</a>
+					</li>
+					<li id="nav3" class="nav-item">
+						<a class="nav-link" href="/admin/PetitionManagement.aspx">
+							<h5><b>청원 관리</b></h5>
+						</a>
+					</li>
+					<li id="nav4" class="nav-item">
+						<a class="nav-link" href="/admin/ProjectManagement.aspx">
+							<h5><b>사업 관리</b></h5>
+						</a>
+					</li>
+					<li id="nav5" class="nav-item">
+						<a class="nav-link" href="/admin/AdminManagement.aspx">
+							<h5><b>관리자 관리</b></h5>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
 	<asp:ContentPlaceHolder ID="Contents" runat="server">
 	</asp:ContentPlaceHolder>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-</body>
+	<!-- Copyright -->
+	<footer>
+		<span>Copyright © 2018 Copyright 5th CNSA Student Council All Rights Reserved</span>
+	</footer>
+
+	<script src="/assets/js/jquery-3.3.1.slim.min.js"></script>
+	<script src="/assets/js/popper.min.js"></script>
+	<script src="/assets/js/bootstrap.min.js"></script></body>
 </html>
