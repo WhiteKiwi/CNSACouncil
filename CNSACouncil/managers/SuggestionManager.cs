@@ -78,5 +78,25 @@ namespace CNSACouncil.Managers {
 			return result;
 		}
 
+		/// <summary>
+		/// State에 해당하는 건의의 개수를 반환하는 함수
+		/// </summary>
+		/// <param name="state">건의 상태</param>  
+		/// <see cref="Suggestion"/>
+		public static int GetSuggestionCountByState(int state) {
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Get Suggestion Count
+				string sql = "SELECT count(*) FROM " + SUGGESTIONS + " WHERE State='" + state + "';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				int result = Convert.ToInt32(cmd.ExecuteScalar());
+
+				conn.Close();
+
+				return result;
+			}
+		}
+
 	}
 }
