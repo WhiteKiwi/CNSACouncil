@@ -17,8 +17,9 @@ namespace CNSACouncil.Managers {
 				conn.Open();
 
 				// Command Text - Create
-				string commandText = "INSERT INTO " + SUGGESTIONS+ "(Content, IP, SuggestAt) VALUES (?, ?, ?);";
+				string commandText = "INSERT INTO " + SUGGESTIONS+ "(Title, Content, IP, SuggestAt) VALUES (?, ?, ?, ?);";
 				var cmd = new MySqlCommand(commandText, conn);
+				cmd.Parameters.Add("Title", MySqlDbType.VarChar).Value = suggestion.Title;
 				cmd.Parameters.Add("Content", MySqlDbType.VarChar).Value = suggestion.Content;
 				cmd.Parameters.Add("IP", MySqlDbType.VarChar).Value = suggestion.IP;
 				cmd.Parameters.Add("SuggestAt", MySqlDbType.DateTime).Value = suggestion.SuggestAt;

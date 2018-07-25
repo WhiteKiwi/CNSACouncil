@@ -17,13 +17,19 @@
 
 	<div class="container-fluid text-center">
 		<!-- Notice box -->
-		<div class="border-box-red">
-			<h3 class="color-red"><b>건의 시 주의사항</b></h3>
+		<div class="border-box-red color-red">
+			<h3><b>건의 시 주의사항</b></h3>
+			<div class="text-left m-3">
+				<h4>1. 건의사항은 5대 학생회에서 학생들의 의견을 빠르게 수렴하고자 만든 페이지 입니다.</h4>
+				<h4>2. 부적절한 언행이나 표현이 포함될 경우 ~~.</h4>
+			</div>
 		</div>
 
 		<!-- Suggest box -->
 		<form runat="server" style="margin: 30px 50px 30px 50px;">
-			<asp:TextBox ID="Content" runat="server" Rows="20" CssClass="w-100" TextMode="MultiLine"></asp:TextBox>
+			<asp:TextBox ID="SuggestionTitle" runat="server" CssClass="w-100 form-control" placeholder="제목"></asp:TextBox>
+			<br />
+			<asp:TextBox ID="Content" runat="server" Rows="10" CssClass="w-100 form-control" TextMode="MultiLine" placeholder="내용"></asp:TextBox>
 			<br />
 			<br />
 

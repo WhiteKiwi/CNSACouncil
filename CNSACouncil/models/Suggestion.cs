@@ -7,6 +7,8 @@ namespace CNSACouncil.Models {
 	public class Suggestion {
 		public int ID { get; set; } // 건의 일련번호
 
+		public string Title { get; set; } // 건의 제목
+
 		public string Content { get; set; } // 건의 내용
 
 		public string IP { get; set; } // 건의자 IP
