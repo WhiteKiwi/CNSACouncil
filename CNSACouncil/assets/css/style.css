@@ -220,3 +220,23 @@ footer {
 		color: white;
 		line-height: 50px;
 	}
+
+
+/* page-num */
+.page-num {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+	.page-num > .page-num-gold {
+		background-color: #F3B120;
+		color: white;
+		padding: 3px 8px;
+	}
+
+	.page-num > .page-num-white {
+		background-color: white;
+		color: #3C3C3C;
+		padding: 3px 8px;
+	}
+
