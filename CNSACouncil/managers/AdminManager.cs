@@ -44,5 +44,35 @@ namespace CNSACouncil.Managers {
 
 			return result;
 		}
+
+		/// <summary>
+		/// Admin 목록을 반환하는 함수
+		/// </summary>
+		/// <see cref="Admin"/>
+		public static List<Admin> GetAdmins() {
+			var adminList = new List<Admin>();
+
+			// Connect to DB
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Command Text - SELECT Admins
+				string commandText = "SELECT * FROM admins;";
+				var cmd = new MySqlCommand(commandText, conn);
+
+				var rdr = cmd.ExecuteReader();
+				while (rdr.Read()) {
+					adminList.Add(new Admin {
+						ID = (string)rdr["ID"],
+						Name = (string)rdr["Name"]
+					});
+				}
+
+				// Connection Close
+				conn.Close();
+			}
+
+			return adminList;
+		}
 	}
 }
