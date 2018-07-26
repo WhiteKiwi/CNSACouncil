@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html class="login-html">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -20,9 +20,15 @@
 </head>
 <body>
 	<form runat="server">
-		<asp:TextBox runat="server" ID="AdminID" placeholder="ID"></asp:TextBox>
-		<asp:TextBox runat="server" ID="AdminPW" TextMode="Password" placeholder="Password"></asp:TextBox>
-		<asp:Button runat="server" ID="LoginButton" Text="로그인" OnClick="LoginButton_Click" />
+		<div class="p-5 border border-secondary">
+			<span>
+				<asp:TextBox runat="server" ID="AdminID" CssClass="form-control" placeholder="ID"></asp:TextBox><br />
+				<asp:TextBox runat="server" ID="AdminPW" CssClass="form-control" TextMode="Password" placeholder="Password"></asp:TextBox>
+			</span>
+			<span>
+				<asp:Button runat="server" ID="LoginButton" CssClass="btn btn-lg btn-warning btn-square square" Text="Login" OnClick="LoginButton_Click" />
+			</span>
+		</div>
 	</form>
 
 	<!-- Copyright -->

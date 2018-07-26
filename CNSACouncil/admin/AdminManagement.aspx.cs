@@ -1,10 +1,5 @@
 ﻿using CNSACouncil.Managers;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace CNSACouncil.admin {
 	public partial class AdminManagement : System.Web.UI.Page {
@@ -22,6 +17,8 @@ namespace CNSACouncil.admin {
 					ID = AdminID.Text,
 					Name = AdminName.Text
 				});
+
+				Response.Redirect("/admin/AdminManagement.aspx");
 			}
 		}
 
@@ -32,6 +29,8 @@ namespace CNSACouncil.admin {
 				Response.Write("<script>alert('새 비밀번호를 입력해주세요.');</script>");
 			} else {
 				AdminManager.ChangePassword((string)Session["AdminID"], OldPassword.Text, NewPassword.Text);
+
+				Response.Redirect("/admin/AdminManagement.aspx");
 			}
 		}
 	}

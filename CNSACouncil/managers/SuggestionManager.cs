@@ -64,7 +64,6 @@ namespace CNSACouncil.Managers {
 				cmd.CommandText = sql;
 
 				var rdr = cmd.ExecuteReader();
-				int i = 0;
 				while (rdr.Read()) {
 					result.Add(new Suggestion {
 						ID = (int)rdr["ID"],

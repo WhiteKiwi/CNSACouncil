@@ -292,3 +292,28 @@ footer {
 	.account-element > div, .account-element > input, .account-element > a {
 		margin: 10px;
 	}
+
+/* Login Page */
+.login-html, .login-html > body {
+	height: 100% !important;
+}
+
+	.login-html > body > form {
+		height: calc(100% - 50px);
+		position: relative;
+	}
+
+		.login-html > body > form > div {
+			width: 500px;
+			background-color: #F6F6F6;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+			.login-html > body > form > div > span:nth-child(1) {
+				float: left;
+				margin-right: 20px;
+				width: 280px;
+			}
