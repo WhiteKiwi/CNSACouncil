@@ -95,5 +95,27 @@ namespace CNSACouncil.Managers {
 				conn.Close();
 			}
 		}
+
+		/// <summary>
+		/// 계정을 삭제하는 메서드
+		/// </summary>
+		/// <param name="adminID">Admin's ID</param>  
+		/// <see cref="Admin.ID"/>
+		public static void DeleteAccount(string adminID) {
+			// Connect to DB
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Command Text - DELETE Account
+				string commandText = "DELETE FROM admins WHERE ID='" + adminID + "';";
+				var cmd = new MySqlCommand(commandText, conn);
+
+				cmd.ExecuteNonQuery();
+
+				// Connection Close
+				conn.Close();
+			}
+		}
+
 	}
 }
