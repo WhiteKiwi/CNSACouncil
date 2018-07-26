@@ -626,6 +626,8 @@
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
+    <Compile Include="managers\AdminManager.cs" />
+    <Compile Include="models\Admin.cs" />
     <Compile Include="models\Counsel.cs" />
     <Compile Include="models\Story.cs" />
     <Compile Include="Notice.aspx.cs">
