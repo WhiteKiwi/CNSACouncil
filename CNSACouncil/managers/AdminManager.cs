@@ -141,5 +141,32 @@ namespace CNSACouncil.Managers {
 			}
 		}
 
+		/// <summary>
+		/// 비밀번호를 변경하는 메서드
+		/// </summary>
+		/// <param name="ID">관리자 ID</param>  
+		/// <param name="oldPassword">기존 비밀번호</param>  
+		/// <param name="newPassword">새 비밀번호</param>  
+		/// <see cref="Admin"/>
+		public static void ChangePassword(string ID, string oldPassword, string newPassword) {
+			if (LoginCheck(new Admin {
+				ID = ID,
+				Password = oldPassword
+			}) == 0) {
+				// Connect to DB
+				using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+					conn.Open();
+
+					// Command Text - Change Password
+					string commandText = "UPDATE admins SET Password='" + (newPassword + "v.j/dsDN1Qe]-1lEJfI1FWAFdqj-9DJ1f9-B0bu%d&_w!4e!@#").GetHashCode() + "' WHERE ID='" + ID + "';";
+					var cmd = new MySqlCommand(commandText, conn);
+
+					cmd.ExecuteNonQuery();
+
+					// Connection Close
+					conn.Close();
+				}
+			}
+		}
 	}
 }
