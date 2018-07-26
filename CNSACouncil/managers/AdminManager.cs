@@ -117,5 +117,29 @@ namespace CNSACouncil.Managers {
 			}
 		}
 
+		/// <summary>
+		/// 계정을 추가하는 메서드
+		/// </summary>
+		/// <param name="admin">Admin class in Models</param>  
+		/// <see cref="Admin"/>
+		public static void AddAdmin(Admin admin) {
+			// Connect to DB
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Command Text - Create
+				string commandText = "INSERT INTO " + ADMINS + "(ID, Password, Name) VALUES (?, ?, ?);";
+				var cmd = new MySqlCommand(commandText, conn);
+				cmd.Parameters.Add("ID", MySqlDbType.VarChar).Value = admin.ID;
+				cmd.Parameters.Add("Password", MySqlDbType.Int32).Value = "5thcnsacouncilv.j/dsDN1Qe]-1lEJfI1FWAFdqj-9DJ1f9-B0bu%d&_w!4e!@#".GetHashCode();
+				cmd.Parameters.Add("Name", MySqlDbType.VarChar).Value = admin.Name;
+
+				cmd.ExecuteNonQuery();
+
+				// Connection Close
+				conn.Close();
+			}
+		}
+
 	}
 }
