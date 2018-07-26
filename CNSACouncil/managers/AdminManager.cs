@@ -9,7 +9,7 @@ namespace CNSACouncil.Managers {
 		private const string ADMINS = "admins";
 
 		/// <summary>
-		/// Login 성공 여부를 확인하는 함수
+		/// Login 성공 여부를 확인하는 메서드
 		/// </summary>
 		/// <param name="admin">Admin class in Models</param>  
 		/// <see cref="Admin"/>
@@ -46,7 +46,7 @@ namespace CNSACouncil.Managers {
 		}
 
 		/// <summary>
-		/// Admin 목록을 반환하는 함수
+		/// Admin 목록을 반환하는 메서드
 		/// </summary>
 		/// <see cref="Admin"/>
 		public static List<Admin> GetAdmins() {
@@ -73,6 +73,27 @@ namespace CNSACouncil.Managers {
 			}
 
 			return adminList;
+		}
+
+		/// <summary>
+		/// 계정 비밀번호를 초기화하는 메서드
+		/// </summary>
+		/// <param name="adminID">Admin's ID</param>  
+		/// <see cref="Admin.ID"/>
+		public static void ResetPassword(string adminID) {
+			// Connect to DB
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Command Text - UPDATE Password
+				string commandText = "UPDATE admins SET Password='" + "5thcnsacouncilv.j/dsDN1Qe]-1lEJfI1FWAFdqj-9DJ1f9-B0bu%d&_w!4e!@#".GetHashCode() + "' WHERE ID='" + adminID + "';";
+				var cmd = new MySqlCommand(commandText, conn);
+
+				cmd.ExecuteNonQuery();
+
+				// Connection Close
+				conn.Close();
+			}
 		}
 	}
 }
