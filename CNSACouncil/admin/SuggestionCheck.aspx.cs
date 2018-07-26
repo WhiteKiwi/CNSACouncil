@@ -1,5 +1,5 @@
-﻿using CNSACouncil.Managers;
-using System;
+﻿using System;
+using CNSACouncil.Managers;
 
 namespace CNSACouncil.admin {
 	public partial class SuggestionCheck : System.Web.UI.Page {

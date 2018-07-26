@@ -270,3 +270,25 @@ footer {
 	background-color: #F5F5F5;
 	padding: 30px;
 }
+
+.square {
+	width: 100px;
+	height: 100px;
+}
+
+.square-small {
+	width: 37px;
+	height: 37px;
+	line-height: 37px;
+	display: inline-block;
+	text-align: center;
+}
+
+/* 관리자 관리 - 관리자 계정 관리 */
+.account-element {
+	height: 50px;
+}
+
+	.account-element > div, .account-element > input, .account-element > a {
+		margin: 10px;
+	}
