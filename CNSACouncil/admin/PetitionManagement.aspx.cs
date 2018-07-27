@@ -40,10 +40,6 @@ namespace CNSACouncil.admin {
 					using (DataSet ds = new DataSet()) {
 						msda.Fill(ds, "Petition");
 
-						ds.Tables[0].Columns.Add("Agrees");
-						foreach (DataRow row in ds.Tables[0].Rows)
-							row[7] = PetitionManager.GetAgreesCount(Convert.ToInt32(row[0]));
-
 						DataTable dt = new DataTable("PageCount");
 						dt.Columns.Add("PageCount");
 						dt.Rows.Add();

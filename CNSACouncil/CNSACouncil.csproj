@@ -609,7 +609,6 @@
     <Compile Include="managers\ProjectManager.cs" />
     <Compile Include="managers\SuggestionManager.cs" />
     <Compile Include="managers\PetitionManager.cs" />
-    <Compile Include="models\Agree.cs" />
     <Compile Include="models\Project.cs" />
     <Compile Include="models\Notice.cs" />
     <Compile Include="models\Suggestion.cs" />

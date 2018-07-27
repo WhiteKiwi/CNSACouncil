@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/Admins.Master" AutoEventWireup="true" CodeBehind="AllowPetition.aspx.cs" Inherits="CNSACouncil.admin.AllowPetition" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
@@ -27,7 +28,7 @@
 		<hr class="hr-gray" />
 		<br />
 		<form runat="server" class="text-center">
-				<asp:Button runat="server" ID="AllowButton" CssClass="btn btn-lg btn-danger btn-square w-25" Text="승인하기" OnClick="AllowButton_Click" />
+			<asp:Button runat="server" ID="AllowButton" CssClass="btn btn-lg btn-danger btn-square w-25" Text="승인하기" OnClick="AllowButton_Click" />
 		</form>
 	</div>
 </asp:Content>

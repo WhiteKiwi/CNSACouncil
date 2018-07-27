@@ -82,7 +82,7 @@ namespace CNSACouncil.Managers {
 				// Command Text - Get Count
 				string sql = "SELECT count(*) FROM " + PETITIONS + " WHERE State='" + state + "';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
-				result = System.Convert.ToInt32(cmd.ExecuteScalar());
+				result = Convert.ToInt32(cmd.ExecuteScalar());
 
 
 				// Connection Close
@@ -91,13 +91,7 @@ namespace CNSACouncil.Managers {
 
 			return result;
 		}
-
-		/// <summary>
-		/// 동의 개수를 반환하는 메서드
-		/// </summary>
-		/// <param name="ID">청원 ID</param>  
-		/// <see cref="Petition"/>
-		public static int GetAgreesCount(int ID) {
+		public static int GetPetitionsCount(string countSql) {
 			int result = 0;
 
 			// Connect to DB
@@ -105,9 +99,9 @@ namespace CNSACouncil.Managers {
 				conn.Open();
 
 				// Command Text - Get Count
-				string sql = "SELECT count(*) FROM agrees WHERE PetitionID='" + ID + "';";
-				MySqlCommand cmd = new MySqlCommand(sql, conn);
-				result = System.Convert.ToInt32(cmd.ExecuteScalar());
+				MySqlCommand cmd = new MySqlCommand(countSql, conn);
+				result = Convert.ToInt32(cmd.ExecuteScalar());
+
 
 				// Connection Close
 				conn.Close();
@@ -138,7 +132,8 @@ namespace CNSACouncil.Managers {
 						UserID = (string)rdr["UserID"],
 						Title = (string)rdr["Title"],
 						Content = (string)rdr["Content"],
-						PetitionAt = (DateTime)rdr["PetitionAt"]
+						PetitionAt = (DateTime)rdr["PetitionAt"],
+						Agrees = (int)rdr["Agrees"]
 					};
 
 					if (state == 2)
@@ -181,7 +176,7 @@ namespace CNSACouncil.Managers {
 		/// </summary>
 		/// <param name="ID">청원 일련번호</param>  
 		/// <param name="state">청원 상태</param>  
-		/// <see cref="Suggestion"/>
+		/// <see cref="Petition"/>
 		public static void PetitionCheck(int ID, int state) {
 			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
 				conn.Open();
