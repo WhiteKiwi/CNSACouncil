@@ -317,3 +317,19 @@ footer {
 				margin-right: 20px;
 				width: 280px;
 			}
+
+/* 답변 완료 */
+.answer-rectangle {
+	height: 110px;
+	width: 70px;
+	background-color: #EB5849;
+	position: absolute;
+	top: 0;
+	right: 5rem;
+	color: white;
+}
+	.answer-rectangle > span {
+		bottom: 0.3rem;
+		left: 1.15rem;
+		position: absolute;
+	}

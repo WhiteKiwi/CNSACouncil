@@ -37,7 +37,12 @@
 	<!-- Get Petition -->
 	<% CNSACouncil.Models.Petition petition = CNSACouncil.Managers.PetitionManager.GetPetitionByID(Request.QueryString["id"], state); %>
 	<!-- Content -->
-	<div class="border border-secondary m-5 p-5">
+	<div class="border border-secondary m-5 p-5" style="position: relative;">
+		<%if (state == 2) { %>
+		<div class="answer-rectangle">
+			<span>답변<br />완료</span>
+		</div>
+		<% } %>
 		<h4><b><%= petition.Title %></b></h4>
 		<div class="color-gray p-2">
 			<span>등록인: <%= petition.UserID.Substring(0, 2) + "****" %></span><span style="margin: 20px;">｜</span><span>청원기간 :  <%= petition.PetitionAt.ToString("yyyy-MM-dd") %> ~ <%= petition.PetitionAt.AddMonths(1).ToString("yyyy-MM-dd") %></span><span style="margin: 20px;">｜</span><span class="color-red"><%= petition.Agrees %>명의 공감</span>
