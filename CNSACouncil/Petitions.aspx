@@ -34,7 +34,7 @@
 	<div class="border-box-gold text-center">
 		<h3>청원게시판은 5대 학생회의 공약 중 하나로 학생들의 여론을 빠르게 수렴하기 위해 만들어졌습니다.</h3>
 		<br />
-		<a href="/" class="btn btn-lg btn-warning btn-square w-25" role="button">지금 청원하기</a>
+		<a href="/UploadPetition.aspx" class="btn btn-lg btn-warning btn-square w-25" role="button">지금 청원하기</a>
 	</div>
 
 	<!-- Petition Box -->
