@@ -1,5 +1,6 @@
 ﻿using CNSACouncil.Models;
 using MySql.Data.MySqlClient;
+using System;
 
 namespace CNSACouncil.Managers {
 	public static class PetitionManager {
@@ -89,5 +90,39 @@ namespace CNSACouncil.Managers {
 
 			return result;
 		}
+
+		/// <summary>
+		/// Petition 정보를 반환하는 함수
+		/// </summary>
+		/// <param name="ID">청원 ID</param>  
+		/// <see cref="Petition"/>
+		public static Petition GetPetitionByID(int ID, int state) {
+			Petition result = null;
+
+			// Connect to DB
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Command Text - Get Count
+				string sql = "SELECT * FROM " + PETITIONS + " WHERE ID='" + ID + "' AND State='" + state + "';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				var rdr = cmd.ExecuteReader();
+				rdr.Read();
+				result = new Petition {
+					Title = (string)rdr["Title"],
+					Content = (string)rdr["Content"],
+					PetitionAt = (DateTime)rdr["PetitionAt"]
+				};
+
+				if (state == 2)
+					result.Reply = GetReply(ID);
+
+				// Connection Close
+				conn.Close();
+			}
+
+			return result;
+		}
+
 	}
 }
