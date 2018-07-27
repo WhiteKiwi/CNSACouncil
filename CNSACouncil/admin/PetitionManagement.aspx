@@ -64,11 +64,12 @@
 	<script type="text/javascript">
 		var pageIndex = 1;
 		var pageCount = 100;
-		$(window).scroll(function () {
-			if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+
+		window.onscroll = function (ev) {
+			if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
 				GetRecords();
 			}
-		});
+		};
 
 		function GetRecords() {
 			pageIndex++;
