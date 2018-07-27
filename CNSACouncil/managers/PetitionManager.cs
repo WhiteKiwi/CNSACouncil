@@ -96,26 +96,29 @@ namespace CNSACouncil.Managers {
 		/// </summary>
 		/// <param name="ID">청원 ID</param>  
 		/// <see cref="Petition"/>
-		public static Petition GetPetitionByID(int ID, int state) {
+		public static Petition GetPetitionByID(string ID, int state) {
 			Petition result = null;
 
 			// Connect to DB
 			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
 				conn.Open();
 
-				// Command Text - Get Count
+				// Command Text - Get Petition
 				string sql = "SELECT * FROM " + PETITIONS + " WHERE ID='" + ID + "' AND State='" + state + "';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 				var rdr = cmd.ExecuteReader();
-				rdr.Read();
-				result = new Petition {
-					Title = (string)rdr["Title"],
-					Content = (string)rdr["Content"],
-					PetitionAt = (DateTime)rdr["PetitionAt"]
-				};
+				if (rdr.Read()) {
+					result = new Petition {
+						ID = int.Parse(ID),
+						UserID = (string)rdr["UserID"],
+						Title = (string)rdr["Title"],
+						Content = (string)rdr["Content"],
+						PetitionAt = (DateTime)rdr["PetitionAt"]
+					};
 
-				if (state == 2)
-					result.Reply = GetReply(ID);
+					if (state == 2)
+						result.Reply = GetReply(int.Parse(ID));
+				}
 
 				// Connection Close
 				conn.Close();
