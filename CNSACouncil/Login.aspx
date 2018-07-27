@@ -1,11 +1,38 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/Students.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="CNSACouncil.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="CNSACouncil.Login" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
+<!DOCTYPE html>
+<html class="login-html">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!-- Title -->
+	<title>충남삼성고등학교 학생회</title>
+
+	<!-- Icon -->
+	<link rel="shortcut icon" href="/assets/img/CSC.png" />
+
+	<!-- Bootstrap CSS Framework -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css?ver=0.3">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/assets/css/style.css?ver=0.8">
+</head>
+<body>
 	<form runat="server">
-		<asp:TextBox runat="server" ID="UserID" placeholder="CNSAnet ID"></asp:TextBox>
-		<asp:TextBox runat="server" ID="UserPW" TextMode="Password" placeholder="CNSAnet PW"></asp:TextBox>
-		<asp:Button runat="server" ID="LoginButton" Text="로그인" OnClick="LoginButton_Click" />
+		<div class="p-5 border border-secondary">
+			<span>
+				<asp:TextBox runat="server" ID="UserID" CssClass="form-control" placeholder="CNSAnet ID"></asp:TextBox><br />
+				<asp:TextBox runat="server" ID="UserPW" CssClass="form-control" TextMode="Password" placeholder="CNSAnet PW"></asp:TextBox>
+			</span>
+			<span>
+				<asp:Button runat="server" ID="LoginButton" CssClass="btn btn-lg btn-warning btn-square square" Text="로그인" OnClick="LoginButton_Click" />
+			</span>
+		</div>
 	</form>
-</asp:Content>
+
+	<!-- Copyright -->
+	<footer>
+		<span>Copyright © 2018 Copyright 5th CNSA Student Council All Rights Reserved</span>
+	</footer>
+</body>
+</html>
