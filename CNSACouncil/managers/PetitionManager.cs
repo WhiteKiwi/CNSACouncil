@@ -201,19 +201,18 @@ namespace CNSACouncil.Managers {
 				conn.Open();
 
 				// Update Petition Agrees
-				string sql = "SELECT * FROM agrees WHERE PetitionID='+ID+' AND UserID='" + userID + "';";
+				string sql = "SELECT EXISTS(SELECT * FROM agrees WHERE PetitionID='" + ID+"' AND UserID='" + userID + "') AS SUCCESS;";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
-				var result = cmd.ExecuteScalar();
 
-				if (result == null) {
-					sql = "UPDATE " + PETITIONS + " SET Agrees = Agrees + 1 WHERE ID='" + ID + "';";
-					cmd.CommandText = sql;
-					cmd.ExecuteNonQuery();
-
+				if (Convert.ToInt32(cmd.ExecuteScalar()) == 0) {
 					sql = "INSERT INTO agrees(PetitionID, UserID) VALUES (?, ?);";
 					cmd.CommandText = sql;
 					cmd.Parameters.Add("PetitionID", MySqlDbType.Int32).Value = ID;
 					cmd.Parameters.Add("UserID", MySqlDbType.VarChar).Value = userID;
+					cmd.ExecuteNonQuery();
+
+					sql = "UPDATE " + PETITIONS + " SET Agrees = Agrees + 1 WHERE ID='" + ID + "';";
+					cmd.CommandText = sql;
 					cmd.ExecuteNonQuery();
 				}
 

@@ -10,10 +10,12 @@ namespace CNSACouncil {
 		protected void AgreeButton_Click(object sender, EventArgs e) {
 			AgreeButton.Enabled = false;
 
-			PetitionManager.AgreePetition(int.Parse(Request.QueryString["id"]), (string)Session["UserID"]);
-			Response.Redirect(Request.RawUrl);
-
-			AgreeButton.Enabled = true;
+			if (Session["UserID"] != null) {
+				PetitionManager.AgreePetition(int.Parse(Request.QueryString["id"]), (string)Session["UserID"]);
+				Response.Redirect(Request.RawUrl);
+			} else {
+				Response.Redirect("/Login.aspx");
+			}
 		}
 	}
 }
