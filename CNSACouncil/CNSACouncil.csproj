@@ -482,6 +482,7 @@
     <Content Include="Notices.aspx" />
     <Content Include="Suggest.aspx" />
     <Content Include="Projects.aspx" />
+    <Content Include="UploadPetition.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -639,6 +640,13 @@
       <DependentUpon>Projects.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UploadPetition.aspx.cs">
+      <DependentUpon>UploadPetition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadPetition.aspx.designer.cs">
+      <DependentUpon>UploadPetition.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
