@@ -42,8 +42,7 @@
 							<h5 class="right-date">등록 기간 :  <span class="petition-at"><%#DateTime.Parse(Eval("PetitionAt").ToString()).ToString("yyyy-MM-dd")%></span></h5>
 							<h5>&nbsp;~ <%#DateTime.Parse(Eval("PetitionAt").ToString()).AddMonths(1).AddHours(9).ToString("yyyy-MM-dd")%></h5>
 							<br />
-							<% // TODO: 링크 수정 %>
-							<a href="/" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
+							<a href="/admin/<%= Request.QueryString["state"] == "awaitingReply" ? "Reply" : "Allow" %>Petition.aspx?id=<%# Eval("ID")%>" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
 						</div>
 					</div>
 				</div>
@@ -109,6 +108,10 @@
 				$(".user-id", div).html(petition.find("UserID").text().substring(0, 3) + "***");
 				$(".petiiton-at", div).html(petition.find("PetitionAt").text());
 				$(".agrees", div).html(petition.find("Agrees").text());
+				if (getParameterByName("state") == "awaitingReply")
+					$(".petition-link", div).attr('href', '/admin/ReplyPetition.aspx?id=' + petition.find("ID").text());
+				else
+					$(".petition-link", div).attr('href', '/admin/AllowPetition.aspx?id=' + petition.find("ID").text());
 				$("#petitions").append(div);
 			});
 			$("#loader").hide();
