@@ -189,5 +189,36 @@ namespace CNSACouncil.Managers {
 				conn.Close();
 			}
 		}
+
+		/// <summary>
+		/// 청원에 동의 수를 1 증가시키는 메서드
+		/// </summary>
+		/// <param name="ID">청원 일련번호</param>  
+		/// <param name="userID">User ID</param>  
+		/// <see cref="Petition"/>
+		public static void AgreePetition(int ID, string userID) {
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Update Petition Agrees
+				string sql = "SELECT * FROM agrees WHERE PetitionID='+ID+' AND UserID='" + userID + "';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				var result = cmd.ExecuteScalar();
+
+				if (result == null) {
+					sql = "UPDATE " + PETITIONS + " SET Agrees = Agrees + 1 WHERE ID='" + ID + "';";
+					cmd.CommandText = sql;
+					cmd.ExecuteNonQuery();
+
+					sql = "INSERT INTO agrees(PetitionID, UserID) VALUES (?, ?);";
+					cmd.CommandText = sql;
+					cmd.Parameters.Add("PetitionID", MySqlDbType.Int32).Value = ID;
+					cmd.Parameters.Add("UserID", MySqlDbType.VarChar).Value = userID;
+					cmd.ExecuteNonQuery();
+				}
+
+				conn.Close();
+			}
+		}
 	}
 }
