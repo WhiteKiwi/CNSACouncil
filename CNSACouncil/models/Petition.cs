@@ -19,6 +19,6 @@ namespace CNSACouncil.Models {
 
 		public int State { get; set; } // 청원 상태 - 0: 미승인, 1: 승인, 2: 답변됨
 
-		public string Reply { get; set; } // 청원 답변 - DB에서는 정규화되어 있음
+		public string Answer { get; set; } // 청원 답변 - DB에서는 정규화되어 있음
 	}
 }

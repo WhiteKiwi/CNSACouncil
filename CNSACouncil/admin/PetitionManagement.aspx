@@ -10,7 +10,7 @@
 	<!-- Petition 분류 선택 -->
 	<% 
 		string[] order = { "", "" };
-		if (Request.QueryString["state"] == "awaitingReply") {
+		if (Request.QueryString["state"] == "awaitingAnswer") {
 			order[1] = " active";
 		} else {
 			order[0] = " active";
@@ -20,7 +20,7 @@
 	<div>
 		<ul class="selection-tab border-bottom">
 			<li class="border-right<%=order[0]%> w-50"><a href="/admin/PetitionManagement.aspx">승인 대기중</a></li>
-			<li class="border-right<%=order[1]%> w-50"><a href="/admin/PetitionManagement.aspx?state=awaitingReply">답변 대기중</a></li>
+			<li class="border-right<%=order[1]%> w-50"><a href="/admin/PetitionManagement.aspx?state=awaitingAnswer">답변 대기중</a></li>
 		</ul>
 	</div>
 
@@ -42,7 +42,7 @@
 							<h5 class="right-date">등록 기간 :  <span class="petition-at"><%#DateTime.Parse(Eval("PetitionAt").ToString()).ToString("yyyy-MM-dd")%></span></h5>
 							<h5>&nbsp;~ <%#DateTime.Parse(Eval("PetitionAt").ToString()).AddMonths(1).AddHours(9).ToString("yyyy-MM-dd")%></h5>
 							<br />
-							<a href="/admin/<%= Request.QueryString["state"] == "awaitingReply" ? "Reply" : "Allow" %>Petition.aspx?id=<%# Eval("ID")%>" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
+							<a href="/admin/<%= Request.QueryString["state"] == "awaitingAnswer" ? "Answer" : "Allow" %>Petition.aspx?id=<%# Eval("ID")%>" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
 						</div>
 					</div>
 				</div>
@@ -108,7 +108,7 @@
 				$(".user-id", div).html(petition.find("UserID").text().substring(0, 2) + "****");
 				$(".petiiton-at", div).html(petition.find("PetitionAt").text());
 				$(".agrees", div).html(petition.find("Agrees").text());
-				if (getParameterByName("state") == "awaitingReply")
+				if (getParameterByName("state") == "awaitingAnswer")
 					$(".petition-link", div).attr('href', '/admin/ReplyPetition.aspx?id=' + petition.find("ID").text());
 				else
 					$(".petition-link", div).attr('href', '/admin/AllowPetition.aspx?id=' + petition.find("ID").text());

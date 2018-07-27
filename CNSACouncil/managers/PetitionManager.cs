@@ -8,7 +8,7 @@ namespace CNSACouncil.Managers {
 		private const string PETITIONS = "petitions";
 
 		/// <summary>
-		/// 청원을 추가하는 함수
+		/// 청원을 추가하는 메서드
 		/// </summary>
 		/// <param name="petition">Suggestion class in Models</param>  
 		/// <see cref="Petition"/>
@@ -43,7 +43,32 @@ namespace CNSACouncil.Managers {
 		}
 
 		/// <summary>
-		/// 청원을 개수를 반환하는 함수
+		/// 답변을 추가하는 메서드 
+		/// </summary>
+		/// <param name="answer'">답변 내용</param>  
+		/// <see cref="Petition.Answer"/>
+		public static void AddAnswer(int ID, string answer) {
+			// Connect to DB
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Command Text - Create
+				string commandText = "INSERT INTO answers(PetitionID, Answer) VALUES (?, ?);";
+				var cmd = new MySqlCommand(commandText, conn);
+				cmd.Parameters.Add("PetitionID", MySqlDbType.UInt32).Value = ID;
+				cmd.Parameters.Add("Answer", MySqlDbType.VarChar).Value = answer;
+
+				cmd.ExecuteNonQuery();
+
+				// Connection Close
+				conn.Close();
+
+				PetitionCheck(ID, 2);
+			}
+		}
+
+		/// <summary>
+		/// 청원을 개수를 반환하는 메서드
 		/// </summary>
 		/// <param name="state">청원 상태</param>  
 		/// <see cref="Petition"/>
@@ -68,7 +93,7 @@ namespace CNSACouncil.Managers {
 		}
 
 		/// <summary>
-		/// 동의 개수를 반환하는 함수
+		/// 동의 개수를 반환하는 메서드
 		/// </summary>
 		/// <param name="ID">청원 ID</param>  
 		/// <see cref="Petition"/>
@@ -92,7 +117,7 @@ namespace CNSACouncil.Managers {
 		}
 
 		/// <summary>
-		/// Petition 정보를 반환하는 함수
+		/// Petition 정보를 반환하는 메서드
 		/// </summary>
 		/// <param name="ID">청원 ID</param>  
 		/// <see cref="Petition"/>
@@ -117,7 +142,7 @@ namespace CNSACouncil.Managers {
 					};
 
 					if (state == 2)
-						result.Reply = GetReply(int.Parse(ID));
+						result.Answer = GetAnswer(int.Parse(ID));
 				}
 
 				// Connection Close
@@ -128,11 +153,11 @@ namespace CNSACouncil.Managers {
 		}
 
 		/// <summary>
-		/// Petition 답변을 반환하는 함수
+		/// Petition 답변을 반환하는 메서드
 		/// </summary>
 		/// <param name="ID">청원 ID</param>  
 		/// <see cref="Petition"/>
-		public static string GetReply(int ID) {
+		public static string GetAnswer(int ID) {
 			string result = "";
 
 			// Connect to DB
@@ -140,7 +165,7 @@ namespace CNSACouncil.Managers {
 				conn.Open();
 
 				// Command Text - Get Count
-				string sql = "SELECT Reply FROM replys WHERE PetitionID='" + ID + "';";
+				string sql = "SELECT Answer FROM answers WHERE PetitionID='" + ID + "';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 				result = (string)cmd.ExecuteScalar();
 
@@ -149,6 +174,25 @@ namespace CNSACouncil.Managers {
 			}
 
 			return result;
+		}
+
+		/// <summary>
+		/// 청원 상태를 조정하는 메서드
+		/// </summary>
+		/// <param name="ID">청원 일련번호</param>  
+		/// <param name="state">청원 상태</param>  
+		/// <see cref="Suggestion"/>
+		public static void PetitionCheck(int ID, int state) {
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Update Petition State
+				string sql = "UPDATE " + PETITIONS + " SET State='" + state + "' WHERE ID='" + ID + "';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				cmd.ExecuteNonQuery();
+
+				conn.Close();
+			}
 		}
 	}
 }

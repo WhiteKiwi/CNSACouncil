@@ -17,7 +17,7 @@ namespace CNSACouncil.admin {
 		public static DataSet GetPetitionsData(int page, string stateValue) {
 			int state;
 
-			if (stateValue == "awaitingReply") {
+			if (stateValue == "awaitingAnswer") {
 				state = 1;
 			} else {
 				state = 0;
