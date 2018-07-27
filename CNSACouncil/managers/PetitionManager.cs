@@ -124,5 +124,28 @@ namespace CNSACouncil.Managers {
 			return result;
 		}
 
+		/// <summary>
+		/// Petition 답변을 반환하는 함수
+		/// </summary>
+		/// <param name="ID">청원 ID</param>  
+		/// <see cref="Petition"/>
+		public static string GetReply(int ID) {
+			string result = "";
+
+			// Connect to DB
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Command Text - Get Count
+				string sql = "SELECT Reply FROM replys WHERE PetitionID='" + ID + "';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				result = (string)cmd.ExecuteScalar();
+
+				// Connection Close
+				conn.Close();
+			}
+
+			return result;
+		}
 	}
 }
