@@ -79,6 +79,7 @@
   <ItemGroup>
     <Content Include="admin\AdminManagement.aspx" />
     <Content Include="admin\AdminSetting.aspx" />
+    <Content Include="admin\AllowPetition.aspx" />
     <Content Include="admin\Default.aspx" />
     <Content Include="admin\Login.aspx" />
     <Content Include="admin\Logout.aspx" />
@@ -501,6 +502,13 @@
     </Compile>
     <Compile Include="admin\AdminSetting.aspx.designer.cs">
       <DependentUpon>AdminSetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AllowPetition.aspx.cs">
+      <DependentUpon>AllowPetition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AllowPetition.aspx.designer.cs">
+      <DependentUpon>AllowPetition.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
