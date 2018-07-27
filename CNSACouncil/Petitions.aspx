@@ -1,6 +1,52 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/Students.Master" AutoEventWireup="true" CodeBehind="Petitions.aspx.cs" Inherits="CNSACouncil.Petitions" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var pageIndex = 1;
+		var pageCount;
+		$(window).scroll(function () {
+			if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+				GetRecords();
+			}
+		});
+		function GetRecords() {
+			pageIndex++;
+			if (pageIndex == 2 || pageIndex <= pageCount) {
+				$("#loader").show();
+				$.ajax({
+					type: "POST",
+					url: "Petitions.aspx/GetPetitions",
+					data: '{pageIndex: ' + pageIndex + '}',
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					success: OnSuccess,
+					failure: function (response) {
+						alert(response.d);
+					},
+					error: function (response) {
+						alert(response.d);
+					}
+				});
+			}
+		}
+		function OnSuccess(response) {
+			var xmlDoc = $.parseXML(response.d);
+			var xml = $(xmlDoc);
+			pageCount = parseInt(xml.find("PageCount").eq(0).find("PageCount").text());
+			var customers = xml.find("Petitions");
+			customers.each(function () {
+				var customer = $(this);
+				var div = $("#petitions:first-child").eq(0).clone(true);
+				$(".title", div).html(customer.find("Title").text());
+				$(".content", div).html(customer.find("Content").text());
+				$(".user-id", div).html(customer.find("UserID").text());
+				$(".petiiton-at", div).html(customer.find("PetitionAt").text());
+			});
+			$("#loader").hide();
+		}
+	</script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
 	<!-- Top Image -->
@@ -36,10 +82,35 @@
 		<a href="/" class="btn btn-lg btn-warning btn-square w-25" role="button">지금 청원하기</a>
 	</div>
 
-	<!-- Comming Soon -->
-	<div class="text-center p-5 petition-box" style="margin: 50px;">
-		<img src="/assets/img/CommingSoon.png" width="600" />
+	<!-- Petition Box -->
+	<div id="petitions" style="overflow: auto;">
+		<asp:Repeater runat="server" ID="repeater">
+			<ItemTemplate>
+				<div class="petition-box">
+					<div class="row">
+						<div class="col-md-7 color-black">
+							<h3 class="petition-box-title"><b class="title"><%# Eval("Title")%></b></h3>
+							<br />
+							<h5 class="petition-box-content"><b class="content"><%# Eval("Content")%></b></h5>
+						</div>
+						<div class="col-md-1"></div>
+						<div class="col-md-4 color-black">
+							<h5>등록인 :  <span class="user-id"><%# Eval("UserID")%></span></h5>
+							<h5 class="color-gold">동의 인원 :  99명</h5>
+							<h5 class="right-date">등록 기간 :  <span class="petition-at"><%# Eval("PetitionAt")%></span></h5>
+							<h5>&nbsp;~ 2018-06-26</h5>
+							<br />
+							<a href="/" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
+						</div>
+					</div>
+				</div>
+				<br />
+				<br />
+			</ItemTemplate>
+		</asp:Repeater>
 	</div>
+
+	<img id="loader" src="/assets/img/loading.gif" style="display: none" />
 
 	<!-- Navbar - Petition -->
 	<script>
