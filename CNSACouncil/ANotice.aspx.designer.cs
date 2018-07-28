@@ -10,6 +10,6 @@
 namespace CNSACouncil {
     
     
-    public partial class Notice {
+    public partial class ANotice {
     }
 }

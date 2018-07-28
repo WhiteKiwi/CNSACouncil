@@ -445,7 +445,7 @@
     <Content Include="assets\js\jquery-1.8.3.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
-    <Content Include="Notice.aspx" />
+    <Content Include="ANotice.aspx" />
     <Content Include="assets\css\bootstrap.min.css" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\img\background-long.png" />
@@ -594,12 +594,12 @@
     <Compile Include="models\Admin.cs" />
     <Compile Include="models\Counsel.cs" />
     <Compile Include="models\Story.cs" />
-    <Compile Include="Notice.aspx.cs">
-      <DependentUpon>Notice.aspx</DependentUpon>
+    <Compile Include="ANotice.aspx.cs">
+      <DependentUpon>ANotice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Notice.aspx.designer.cs">
-      <DependentUpon>Notice.aspx</DependentUpon>
+    <Compile Include="ANotice.aspx.designer.cs">
+      <DependentUpon>ANotice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
