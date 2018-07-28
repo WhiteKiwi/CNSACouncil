@@ -27,9 +27,9 @@
 
 		<!-- Suggest box -->
 		<form runat="server" style="margin: 30px 50px 30px 50px;">
-			<asp:TextBox ID="SuggestionTitle" runat="server" CssClass="w-100 form-control" placeholder="제목"></asp:TextBox>
+			<asp:TextBox ID="SuggestionTitle" runat="server" CssClass="w-100 form-control" placeholder="제목을 입력하세요"></asp:TextBox>
 			<br />
-			<asp:TextBox ID="Content" runat="server" Rows="10" CssClass="w-100 form-control" TextMode="MultiLine" placeholder="내용"></asp:TextBox>
+			<asp:TextBox ID="Content" runat="server" Rows="10" CssClass="w-100 form-control" TextMode="MultiLine" placeholder="내용을 입력하세요"></asp:TextBox>
 			<br />
 			<br />
 
