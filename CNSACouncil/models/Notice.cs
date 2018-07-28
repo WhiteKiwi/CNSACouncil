@@ -12,7 +12,5 @@ namespace CNSACouncil.Models {
 		public string Content { get; set; } // 공지 내용
 
 		public DateTime NoticeAt { get; set; } // 공지일
-
-		public int Views { get; set; } // 조회수
 	}
 }
