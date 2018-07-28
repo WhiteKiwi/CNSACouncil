@@ -98,50 +98,36 @@
 		<hr class="hr-red" />
 		<h3 class="color-red">Hot Issues</h3>
 		<br />
+		<% var petitions = CNSACouncil.Managers.PetitionManager.GetPetitionsByAgrees(2);
+			foreach (var petition in petitions) { %>
 		<div class="petition-box">
 			<div class="row">
 				<div class="col-md-7 color-black">
-					<h3 class="petition-box-title"><b>이거 진짜 바뀌어야 할 것 같지 않아요?</b></h3>
+					<h3 class="petition-box-title"><b><%= petition.Title %></b></h3>
 					<br />
-					<h5 class="petition-box-content"><b>그쵸? 동의?</b></h5>
+					<h5 class="petition-box-content"><b><%= petition.Content.Length > 120 ? petition.Content.Substring(0, 120) + "..." : petition.Content %></b></h5>
 				</div>
 				<div class="col-md-1"></div>
 				<div class="col-md-4 color-black">
-					<h5>등록인 :  최모양</h5>
-					<h5 class="color-gold">동의 인원 :  99명</h5>
-					<h5 class="right-date">등록 기간 :  2018-05-26</h5>
-					<h5>&nbsp;~ 2018-06-26</h5>
+					<h5>등록인 :  <%= petition.UserID.Substring(0, 2) + "****" %></h5>
+					<h5 class="color-gold">동의 인원 :  <%= petition.Agrees %></h5>
+					<h5 class="right-date">등록 기간 :  <%= petition.PetitionAt.ToString("yyyy-MM-dd") %></h5>
+					<h5>&nbsp;~ <%= petition.PetitionAt.AddMonths(1).ToString("yyyy-MM-dd") %></h5>
 					<br />
-					<a href="/" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
+					<a href="/APetition.aspx?order=best&id=<%= petition.ID %>" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
 				</div>
 			</div>
 		</div>
 		<br />
-		<br />
-		<div class="petition-box">
-			<div class="row">
-				<div class="col-md-7 color-black">
-					<h3 class="petition-box-title"><b>이거 진짜 바뀌어야 할 것 같지 않아요?</b></h3>
-					<br />
-					<h5 class="petition-box-content"><b>그쵸? 동의?</b></h5>
-				</div>
-				<div class="col-md-1"></div>
-				<div class="col-md-4 color-black">
-					<h5>등록인 :  최모양</h5>
-					<h5 class="color-gold">동의 인원 :  99명</h5>
-					<h5 class="right-date">등록 기간 :  2018-05-26</h5>
-					<h5>&nbsp;~ 2018-06-26</h5>
-					<br />
-					<a href="/" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
-				</div>
-			</div>
-		</div>
+		<% } %>
 	</div>
 
 	<!-- Comming Soon -->
-	<div class="text-center p-5 petition-box" style="margin: 60px;">
+	<div class="text-center p-5 petition-box" style="margin-left: 60px; margin-right: 60px;">
 		<img src="/assets/img/CommingSoon.png" width="600" />
 	</div>
+	<br />
+	<br />
 
 	<!-- Navbar - HOME -->
 	<script>
