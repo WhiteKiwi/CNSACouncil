@@ -22,7 +22,7 @@ namespace CNSACouncil {
 				if (Managers.PetitionManager.UploadPetition(new Models.Petition {
 					UserID = (string)Session["UserID"],
 					Title = PetitionTitle.Text,
-					Content = Content.Text,
+					Content = Content.Text.Replace("\r\n", "<br/>"),
 					IP = Request.UserHostAddress,
 					PetitionAt = DateTime.Now.AddHours(9)
 				}) == 0)

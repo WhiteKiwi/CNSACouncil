@@ -17,7 +17,7 @@ namespace CNSACouncil {
 				// 건의 추가
 				if (Managers.SuggestionManager.UploadSuggestion(new Models.Suggestion {
 					Title = SuggestionTitle.Text,
-					Content = Content.Text,
+					Content = Content.Text.Replace("\r\n", "<br/>"),
 					IP = Request.UserHostAddress,
 					SuggestAt = DateTime.Now.AddHours(9)
 				}) == 0)
