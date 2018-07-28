@@ -114,7 +114,7 @@
 					<h5 class="right-date">등록 기간 :  <%= petition.PetitionAt.ToString("yyyy-MM-dd") %></h5>
 					<h5>&nbsp;~ <%= petition.PetitionAt.AddMonths(1).ToString("yyyy-MM-dd") %></h5>
 					<br />
-					<a href="/APetition.aspx?order=best&id=<%= petition.ID %>" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
+					<a href="/Petition.aspx?order=best&id=<%= petition.ID %>" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
 				</div>
 			</div>
 		</div>
