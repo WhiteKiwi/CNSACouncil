@@ -1,6 +1,7 @@
-﻿using CNSACouncil.Models;
+﻿using System;
 using MySql.Data.MySqlClient;
-using System;
+using CNSACouncil.Models;
+using System.Collections.Generic;
 
 namespace CNSACouncil.Managers {
 	public static class PetitionManager {
@@ -200,8 +201,8 @@ namespace CNSACouncil.Managers {
 			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
 				conn.Open();
 
-				// Update Petition Agrees
-				string sql = "SELECT EXISTS(SELECT * FROM agrees WHERE PetitionID='" + ID+"' AND UserID='" + userID + "') AS SUCCESS;";
+				// 이미 동의 했는지 동의 여부 검사
+				string sql = "SELECT EXISTS(SELECT * FROM agrees WHERE PetitionID='" + ID + "' AND UserID='" + userID + "') AS SUCCESS;";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 
 				if (Convert.ToInt32(cmd.ExecuteScalar()) == 0) {
@@ -218,6 +219,38 @@ namespace CNSACouncil.Managers {
 
 				conn.Close();
 			}
+		}
+
+		/// <summary>
+		/// 공감순으로 청원을 반환하는 메서드
+		/// </summary>
+		/// <param name="count">가져올 청원 개수</param>  
+		/// <see cref="Petition"/>
+		public static List<Petition> GetPetitionsByAgrees(int count) {
+			var result = new List<Petition>();
+
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Get 2 Petition by Agrees
+				string sql = "SELECT * FROM petitions WHERE State='1' AND (DATE_ADD(NOW(), INTERVAL -1 MONTH ) < PetitionAt) ORDER BY Agrees DESC LIMIT " + count + ";";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				var rdr = cmd.ExecuteReader();
+				while (rdr.Read()) {
+					result.Add(new Petition {
+						ID = Convert.ToInt32(rdr["ID"]),
+						Title = (string)rdr["Title"],
+						Content = (string)rdr["Content"],
+						UserID = (string)rdr["UserID"],
+						PetitionAt = (DateTime)rdr["PetitionAt"],
+						Agrees = (int)rdr["Agrees"]
+					});
+				}
+
+				conn.Close();
+			}
+
+			return result;
 		}
 	}
 }
