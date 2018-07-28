@@ -55,7 +55,7 @@
 							<h5 class="right-date">등록 기간 :  <span class="petition-at"><%#DateTime.Parse(Eval("PetitionAt").ToString()).ToString("yyyy-MM-dd")%></span></h5>
 							<h5>&nbsp;~ <%#DateTime.Parse(Eval("PetitionAt").ToString()).AddMonths(1).AddHours(9).ToString("yyyy-MM-dd")%></h5>
 							<br />
-							<a href="/APetition.aspx?order=<%= Request.QueryString["order"] %>&id=<%# Eval("ID")%>" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
+							<a href="/Petition.aspx?order=<%= Request.QueryString["order"] %>&id=<%# Eval("ID")%>" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
 						</div>
 					</div>
 				</div>
@@ -122,7 +122,7 @@
 				$(".user-id", div).html(petition.find("UserID").text().substring(0, 2) + "****");
 				$(".petiiton-at", div).html(petition.find("PetitionAt").text());
 				$(".agrees", div).html(petition.find("Agrees").text());
-				$(".petition-link", div).attr('href', '/APetition.aspx?order=' + getParameterByName("order") + '&id=' + petition.find("ID").text());
+				$(".petition-link", div).attr('href', '/Petition.aspx?order=' + getParameterByName("order") + '&id=' + petition.find("ID").text());
 				$("#petitions").append(div);
 			});
 			$("#loader").hide();
