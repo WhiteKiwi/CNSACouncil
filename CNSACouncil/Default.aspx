@@ -110,7 +110,7 @@
 				<div class="col-md-1"></div>
 				<div class="col-md-4 color-black">
 					<h5>등록인 :  <%= petition.UserID.Substring(0, 2) + "****" %></h5>
-					<h5 class="color-gold">동의 인원 :  <%= petition.Agrees %></h5>
+					<h5 class="color-gold">동의 인원 :  <%= petition.Agrees %>명</h5>
 					<h5 class="right-date">등록 기간 :  <%= petition.PetitionAt.ToString("yyyy-MM-dd") %></h5>
 					<h5>&nbsp;~ <%= petition.PetitionAt.AddMonths(1).ToString("yyyy-MM-dd") %></h5>
 					<br />
