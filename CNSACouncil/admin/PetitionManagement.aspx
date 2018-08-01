@@ -37,6 +37,7 @@
 						</div>
 						<div class="col-md-1"></div>
 						<div class="col-md-4 color-black">
+							<br>
 							<h5>등록인 :  <span class="user-id"><%# Eval("UserID").ToString().Substring(0, 2) + "****"%></span></h5>
 							<h5 class="color-gold">동의 인원 :  <span class="agrees"><%# Eval("Agrees")%></span>명</h5>
 							<h5 class="right-date">등록 기간 :  <span class="petition-at"><%#DateTime.Parse(Eval("PetitionAt").ToString()).ToString("yyyy-MM-dd")%></span></h5>

@@ -109,6 +109,7 @@
 				</div>
 				<div class="col-md-1"></div>
 				<div class="col-md-4 color-black">
+					<br>
 					<h6>등록인 :  <%= petition.UserID.Substring(0, 2) + "****" %></h6>
 					<h6 class="color-gold">동의 인원 :  <%= petition.Agrees %>명</h6>
 					<h6 class="right-date">등록 기간 :  <%= petition.PetitionAt.ToString("yyyy-MM-dd") %></h6>
