@@ -76,5 +76,24 @@ namespace CNSACouncil.Managers {
 			}
 			return result;
 		}
+
+		/// <summary>
+		/// 공지의 개수를 반환하는 함수
+		/// </summary>
+		/// <see cref="Notice"/>
+		public static int GetNoticeCount() {
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Get Notices Count
+				string sql = "SELECT count(*) FROM " + NOTICES + ";";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				int result = Convert.ToInt32(cmd.ExecuteScalar());
+
+				conn.Close();
+
+				return result;
+			}
+		}
 	}
 }
