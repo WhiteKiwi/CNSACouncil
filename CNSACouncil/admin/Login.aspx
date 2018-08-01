@@ -16,18 +16,24 @@
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css?ver=0.3">
 
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="/assets/css/style.css?ver=0.6">
+	<link rel="stylesheet" href="/assets/css/style.css?ver=0.8">
 </head>
 <body>
 	<form runat="server">
 		<div class="p-5 border border-secondary">
-			<span>
-				<asp:TextBox runat="server" ID="AdminID" CssClass="form-control" placeholder="ID"></asp:TextBox><br />
-				<asp:TextBox runat="server" ID="AdminPW" CssClass="form-control" TextMode="Password" placeholder="Password"></asp:TextBox>
-			</span>
-			<span>
-				<asp:Button runat="server" ID="LoginButton" CssClass="btn btn-lg btn-warning btn-square square" Text="Login" OnClick="LoginButton_Click" />
-			</span>
+			<div class="text-center" style="margin-top: -15px; padding-right: 15px; padding-bottom: 10px;">
+				<img src="/assets/img/Logo.png" width="330" />
+			</div>
+			<br />
+			<div>
+				<span>
+					<asp:TextBox runat="server" ID="AdminID" CssClass="form-control" placeholder="ID"></asp:TextBox><br />
+					<asp:TextBox runat="server" ID="AdminPW" CssClass="form-control" TextMode="Password" placeholder="Password"></asp:TextBox>
+				</span>
+				<span>
+					<asp:Button runat="server" ID="LoginButton" CssClass="btn btn-lg btn-warning btn-square square" Text="Login" OnClick="LoginButton_Click" />
+				</span>
+			</div>
 		</div>
 	</form>
 

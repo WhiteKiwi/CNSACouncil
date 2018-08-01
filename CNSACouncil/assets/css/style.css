@@ -323,7 +323,7 @@ footer {
 			transform: translate(-50%, -50%);
 		}
 
-			.login-html > body > form > div > span:nth-child(1) {
+			.login-html > body > form > div > div > span:nth-child(1) {
 				float: left;
 				margin-right: 20px;
 				width: 280px;

@@ -20,13 +20,19 @@
 <body>
 	<form runat="server">
 		<div class="p-5 border border-secondary">
-			<span>
-				<asp:TextBox runat="server" ID="UserID" CssClass="form-control" placeholder="CNSAnet ID"></asp:TextBox><br />
-				<asp:TextBox runat="server" ID="UserPW" CssClass="form-control" TextMode="Password" placeholder="CNSAnet PW"></asp:TextBox>
-			</span>
-			<span>
-				<asp:Button runat="server" ID="LoginButton" CssClass="btn btn-lg btn-warning btn-square square" Text="로그인" OnClick="LoginButton_Click" />
-			</span>
+			<div class="text-center" style="margin-top: -15px; padding-right: 15px; padding-bottom: 10px;">
+				<img src="/assets/img/Logo.png" width="330" />
+			</div>
+			<br />
+			<div>
+				<span>
+					<asp:TextBox runat="server" ID="UserID" CssClass="form-control" placeholder="CNSAnet ID"></asp:TextBox><br />
+					<asp:TextBox runat="server" ID="UserPW" CssClass="form-control" TextMode="Password" placeholder="CNSAnet PW"></asp:TextBox>
+				</span>
+				<span>
+					<asp:Button runat="server" ID="LoginButton" CssClass="btn btn-lg btn-warning btn-square square" Text="로그인" OnClick="LoginButton_Click" />
+				</span>
+			</div>
 		</div>
 	</form>
 
