@@ -33,7 +33,7 @@
 						<div class="col-md-7 color-black">
 							<h3 class="petition-box-title"><b class="title"><%# Eval("Title")%></b></h3>
 							<br />
-							<h5 class="petition-box-content"><b class="content"><%# Eval("Content").ToString().Length > 120 ? Eval("Content").ToString().Substring(0, 120) + "..." : Eval("Content")%></b></h5>
+							<h5 class="petition-box-content"><%# Eval("Content").ToString().Length > 120 ? Eval("Content").ToString().Substring(0, 120) + "..." : Eval("Content")%></h5>
 						</div>
 						<div class="col-md-1"></div>
 						<div class="col-md-4 color-black">
@@ -103,9 +103,9 @@
 				$(".title", div).html(petition.find("Title").text());
 				var content = petition.find("Content").text();
 				if (content.length > 120)
-					$(".content", div).html(petition.find("Content").text().substring(0, 120) + "...");
+					$(".petition-box-content", div).html(petition.find("Content").text().substring(0, 120) + "...");
 				else
-					$(".content", div).html(petition.find("Content").text());
+					$(".petition-box-content", div).html(petition.find("Content").text());
 				$(".user-id", div).html(petition.find("UserID").text().substring(0, 2) + "****");
 				$(".petiiton-at", div).html(petition.find("PetitionAt").text());
 				$(".agrees", div).html(petition.find("Agrees").text());

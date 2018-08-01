@@ -8,11 +8,11 @@
 
 	<div class="container-fluid text-center">
 		<!-- Notice box -->
-		<div class="border-box-red color-red">
-			<h3><b>청원 시 주의사항</b></h3>
-			<div class="text-left m-3">
-				<h4>1. 청원 페이지는 5대 학생회에서 학생들의 의견을 빠르게 수렴하고자 만든 페이지 입니다.</h4>
-				<h4>2. 부적절한 언행이나 표현이 포함될 경우 ~~.</h4>
+		<div class="border-box-red" style="padding-bottom: 5px;">
+			<h3 class="color-red" style="margin-left: 20px;"><b>청원 시 주의사항</b></h3>
+			<div class="m-4 color-gray">
+				<h5>1. 청원하기와 건의하기는 구분하여 사용해주시기 바랍니다.</h5>
+				<h5>2. </h5>
 			</div>
 		</div>
 

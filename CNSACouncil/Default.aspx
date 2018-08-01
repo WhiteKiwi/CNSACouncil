@@ -105,14 +105,14 @@
 				<div class="col-md-7 color-black">
 					<h3 class="petition-box-title"><b><%= petition.Title %></b></h3>
 					<br />
-					<h5 class="petition-box-content"><b><%= petition.Content.Length > 120 ? petition.Content.Substring(0, 120) + "..." : petition.Content %></b></h5>
+					<h5 class="petition-box-content"><%= petition.Content.Length > 120 ? petition.Content.Substring(0, 120) + "..." : petition.Content %></h5>
 				</div>
 				<div class="col-md-1"></div>
 				<div class="col-md-4 color-black">
-					<h5>등록인 :  <%= petition.UserID.Substring(0, 2) + "****" %></h5>
-					<h5 class="color-gold">동의 인원 :  <%= petition.Agrees %>명</h5>
-					<h5 class="right-date">등록 기간 :  <%= petition.PetitionAt.ToString("yyyy-MM-dd") %></h5>
-					<h5>&nbsp;~ <%= petition.PetitionAt.AddMonths(1).ToString("yyyy-MM-dd") %></h5>
+					<h6>등록인 :  <%= petition.UserID.Substring(0, 2) + "****" %></h6>
+					<h6 class="color-gold">동의 인원 :  <%= petition.Agrees %>명</h6>
+					<h6 class="right-date">등록 기간 :  <%= petition.PetitionAt.ToString("yyyy-MM-dd") %></h6>
+					<h6>&nbsp;~ <%= petition.PetitionAt.AddMonths(1).ToString("yyyy-MM-dd") %></h6>
 					<br />
 					<a href="/Petition.aspx?order=best&id=<%= petition.ID %>" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
 				</div>
