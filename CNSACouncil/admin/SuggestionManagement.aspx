@@ -25,15 +25,15 @@
 		</ul>
 	</div>
 
-	<div class="m-5 color-black border border-top-0 border-bottom-0">
-		<div style="background-color: #707070; height: 5px; margin-bottom: 1rem;"></div>
+	<div class="m-5 color-black">
+		<div style="background-color: #707070; height: 2px; margin-bottom: 1rem;"></div>
 		<div class="board-element">
 			<span><b>번호</b></span>
 			<span><b>제목</b></span>
 			<span><b>건의일</b></span>
 		</div>
 		<br />
-		<hr />
+		<hr class="hr-board" />
 		<% int page;
 			try {
 				page = int.Parse(Request.QueryString["page"]);
@@ -63,7 +63,7 @@
 			</div>
 			<%} %>
 		</div>
-		<hr />
+		<hr class="hr-board" />
 
 		<%suggestionNum++;
 			} %>

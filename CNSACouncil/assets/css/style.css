@@ -73,6 +73,12 @@ a.content-link:hover > h5 {
 
 
 /* hr CSS */
+.hr-board {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	border-top: 1px solid #D2D2D2;
+}
+
 .hr-gray {
 	display: block;
 	height: 1px;
@@ -243,7 +249,7 @@ footer {
 /* 게시판 Item */
 .board-element {
 	margin: 1.5rem;
-	margin-top: 1.3rem;
+	margin-top: 1.1rem;
 }
 
 	.board-element > span:nth-child(1) {
