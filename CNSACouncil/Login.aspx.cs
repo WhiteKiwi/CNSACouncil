@@ -23,7 +23,7 @@ namespace CNSACouncil {
 					// 로그인 성공 시 세션 저장
 					Session["UserID"] = UserID.Text;
 					// 메인 화면으로 Redirect
-					Response.Redirect("/");
+					Response.Redirect("/Petitions.aspx");
 				} else {
 					// 로그인 실패
 					Response.Write("<script>alert('로그인에 실패하였습니다.');</script>");
