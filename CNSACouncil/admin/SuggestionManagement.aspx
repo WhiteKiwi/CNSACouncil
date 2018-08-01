@@ -26,7 +26,7 @@
 	</div>
 
 	<div class="m-5 color-black">
-		<div style="background-color: #707070; height: 2px; margin-bottom: 1rem;"></div>
+		<div class="board-bar"></div>
 		<div class="board-element">
 			<span><b>번호</b></span>
 			<span><b>제목</b></span>
