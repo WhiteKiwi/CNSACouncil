@@ -16,7 +16,7 @@
 
 			<% var notices = CNSACouncil.Managers.NoticeManager.GetNoticesByNoticeAt(5);
 
-				foreach(var notice in notices) { %>
+				foreach (var notice in notices) { %>
 			<div class="w-100 content-div">
 				<a href="/Notice.aspx?id=<%= notice.ID %>" class="content-link notice">
 					<h5 class="float-left"><%= notice.Title %></h5>
@@ -80,9 +80,9 @@
 		<div class="petition-box">
 			<div class="row">
 				<div class="col-md-7 color-black">
-					<h3 class="petition-box-title"><b><%= petition.Title %></b></h3>
+					<h3 class="petition-box-title"><b><%= petition.Title.Length > 18 ? petition.Title.Substring(0, 18) + "..." : petition.Title %></b></h3>
 					<br />
-					<h5 class="petition-box-content"><%= petition.Content.Length > 120 ? petition.Content.Substring(0, 120) + "..." : petition.Content %></h5>
+					<h5 class="petition-box-content"><%= petition.Content.Replace("<br/>", " ").Length > 170 ? petition.Content.Replace("<br/>", " ").Substring(0, 170) + "..." : petition.Content %></h5>
 				</div>
 				<div class="col-md-1"></div>
 				<div class="col-md-4 color-black">

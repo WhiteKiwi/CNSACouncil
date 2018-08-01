@@ -31,9 +31,9 @@
 				<div class="petition-box" style="margin: 50px;">
 					<div class="row">
 						<div class="col-md-7 color-black">
-							<h3 class="petition-box-title"><b class="title"><%# Eval("Title")%></b></h3>
+							<h3 class="petition-box-title"><b class="title"><%# Eval("Title").ToString().Length > 18 ? Eval("Title").ToString().Substring(0, 18) + "..." : Eval("Title") %></b></h3>
 							<br />
-							<h5 class="petition-box-content"><%# Eval("Content").ToString().Length > 120 ? Eval("Content").ToString().Substring(0, 120) + "..." : Eval("Content")%></h5>
+							<h5 class="petition-box-content"><%# Eval("Content").ToString().Replace("<br/>", " ").Length > 170 ? Eval("Content").ToString().Replace("<br/>", " ").Substring(0, 170) + "..." : Eval("Content").ToString().Replace("<br/>", " ")%></h5>
 						</div>
 						<div class="col-md-1"></div>
 						<div class="col-md-4 color-black">
