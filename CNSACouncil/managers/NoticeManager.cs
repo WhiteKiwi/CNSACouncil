@@ -95,5 +95,34 @@ namespace CNSACouncil.Managers {
 				return result;
 			}
 		}
+
+		/// <summary>
+		/// 메인 페이지 리스팅을 위해 공지를 최신순으로 가져오는 함수
+		/// </summary>
+		/// <see cref="Notice"/>
+		public static List<Notice> GetNoticesByNoticeAt(int count) {
+			var result = new List<Notice>();
+
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Get Notices
+				string sql = "SELECT * FROM " + NOTICES + " ORDER BY NoticeAt DESC LIMIT " + count + ";";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				var rdr = cmd.ExecuteReader();
+
+				while (rdr.Read()) {
+					result.Add(new Notice {
+						ID = (int)rdr["ID"],
+						Title = (string)rdr["Title"],
+						NoticeAt = (DateTime)rdr["NoticeAt"]
+					});
+				}
+
+				conn.Close();
+			}
+
+			return result;
+		}
 	}
 }

@@ -13,41 +13,18 @@
 			<hr class="hr-black" />
 			<h3>Recent Notice</h3>
 			<br />
+
+			<% var notices = CNSACouncil.Managers.NoticeManager.GetNoticesByNoticeAt(5);
+
+				foreach(var notice in notices) { %>
 			<div class="w-100 content-div">
-				<a href="/" class="content-link notice">
-					<h5 class="float-left">안녕하세요 5대 학생회 입니다.</h5>
+				<a href="/Notice.aspx?id=<%= notice.ID %>" class="content-link notice">
+					<h5 class="float-left"><%= notice.Title %></h5>
 				</a>
-				<h5 class="float-right content-sub">2018-05-26</h5>
+				<h5 class="float-right content-sub"><%= notice.NoticeAt.ToString("yyyy-MM-dd") %></h5>
 			</div>
 			<br />
-			<div class="w-100 content-div">
-				<a href="/" class="content-link notice">
-					<h5 class="float-left">안녕하세요 5대 학생회 입니다.</h5>
-				</a>
-				<h5 class="float-right content-sub">2018-05-26</h5>
-			</div>
-			<br />
-			<div class="w-100 content-div">
-				<a href="/" class="content-link notice">
-					<h5 class="float-left">안녕하세요 5대 학생회 입니다.</h5>
-				</a>
-				<h5 class="float-right content-sub">2018-05-26</h5>
-			</div>
-			<br />
-			<div class="w-100 content-div">
-				<a href="/" class="content-link notice">
-					<h5 class="float-left">안녕하세요 5대 학생회 입니다.</h5>
-				</a>
-				<h5 class="float-right content-sub">2018-05-26</h5>
-			</div>
-			<br />
-			<div class="w-100 content-div">
-				<a href="/" class="content-link notice">
-					<h5 class="float-left">안녕하세요 5대 학생회 입니다.</h5>
-				</a>
-				<h5 class="float-right content-sub">2018-05-26</h5>
-			</div>
-			<br />
+			<% } %>
 		</div>
 
 		<!-- Projects -->
