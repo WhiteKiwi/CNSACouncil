@@ -48,12 +48,11 @@
 	color: #3C3C3C;
 }
 
-@media (max-width: 1199.98px) {
 	.content-link.notice > h5 {
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		word-wrap: normal;
-		width: 200px;
+		width: calc(100% - 180px);
 		overflow: hidden;
 	}
 
@@ -61,10 +60,9 @@
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		word-wrap: normal;
-		width: 270px;
+		width: calc(100% - 180px);
 		overflow: hidden;
 	}
-}
 
 a.content-link:hover > h5 {
 	color: #3C3C3C;
