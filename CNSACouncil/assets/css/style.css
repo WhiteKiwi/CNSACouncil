@@ -267,6 +267,14 @@ footer {
 		width: 200px;
 	}
 
+	.board-element > span {
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		word-wrap: normal;
+		width: calc(100% - 380px);
+		overflow: hidden;
+	}
+
 /* 게시판 굵은 선 */
 .board-bar {
 	background-color: #707070;
