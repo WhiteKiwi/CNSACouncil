@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/Admins.Master" AutoEventWireup="true" CodeBehind="AllowPetition.aspx.cs" Inherits="CNSACouncil.admin.AllowPetition" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/Admins.Master" AutoEventWireup="true" CodeBehind="DelayedPetition.aspx.cs" Inherits="CNSACouncil.admin.DelayedPetition" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -9,14 +9,14 @@
 	<!-- Petition Tab -->
 	<div>
 		<ul class="selection-tab border-bottom">
-			<li class="border-right active" style="width: 33.3%;"><a href="/admin/PetitionManagement.aspx">승인 대기중</a></li>
+			<li class="border-right" style="width: 33.3%;"><a href="/admin/PetitionManagement.aspx">승인 대기중</a></li>
 			<li class="border-right" style="width: 33.3%;"><a href="/admin/PetitionManagement.aspx?state=awaitingAnswer">답변 대기중</a></li>
-			<li class="border-right" style="width: 33.3%;"><a href="/admin/PetitionManagement.aspx?state=delayed">지연됨</a></li>
+			<li class="border-right active" style="width: 33.3%;"><a href="/admin/PetitionManagement.aspx?state=delayed">지연됨</a></li>
 		</ul>
 	</div>
 
 	<!-- Get Petition -->
-	<% CNSACouncil.Models.Petition petition = CNSACouncil.Managers.PetitionManager.GetPetitionByID(Request.QueryString["id"], 0); %>
+	<% CNSACouncil.Models.Petition petition = CNSACouncil.Managers.PetitionManager.GetPetitionByID(Request.QueryString["id"], -1); %>
 	<!-- Content -->
 	<div class="border border-secondary m-5 p-5">
 		<h4><b><%= petition.Title %></b></h4>
@@ -28,9 +28,8 @@
 		<br />
 		<hr class="hr-gray" />
 		<br />
-		<form runat="server" class="text-center">
-			<asp:Button runat="server" ID="AllowButton" CssClass="btn btn-lg btn-danger btn-square w-25" Text="승인하기" OnClick="AllowButton_Click" />
-			<asp:Button runat="server" ID="DelayButton" CssClass="btn btn-lg btn-warning btn-square w-25" Text="지연하기" OnClick="DelayButton_Click" />
-		</form>
+		<div class="text-center">
+			<a href="/admin/PetitionManagement.aspx?state=delayed" class="btn btn-lg btn-danger btn-square w-25" role="button">돌아가기</a>
+		</div>
 	</div>
 </asp:Content>

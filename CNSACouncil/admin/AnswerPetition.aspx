@@ -7,10 +7,12 @@
 	<img src="/assets/img/background-long.png" style="width: 100%;" />
 
 	<!-- Petition Tab -->
+	<!-- Petition Tab -->
 	<div>
 		<ul class="selection-tab border-bottom">
-			<li class="border-right w-50"><a href="/admin/PetitionManagement.aspx">승인 대기중</a></li>
-			<li class="border-right active w-50"><a href="/admin/PetitionManagement.aspx?state=awaitingAnswer">답변 대기중</a></li>
+			<li class="border-right" style="width: 33.3%;"><a href="/admin/PetitionManagement.aspx">승인 대기중</a></li>
+			<li class="border-right active" style="width: 33.3%;"><a href="/admin/PetitionManagement.aspx?state=awaitingAnswer">답변 대기중</a></li>
+			<li class="border-right" style="width: 33.3%;"><a href="/admin/PetitionManagement.aspx?state=delayed">지연됨</a></li>
 		</ul>
 	</div>
 
@@ -36,7 +38,7 @@
 			<br />
 			<br />
 			<div class="text-center">
-				<asp:Button runat="server" ID="AnswerButton" CssClass="btn btn-lg btn-danger btn-square w-25" Text="등록하기" OnClick="AnswerButton_Click" />
+				<asp:Button runat="server" ID="AnswerButton" CssClass="btn btn-lg btn-danger btn-square w-25" Text="답변하기" OnClick="AnswerButton_Click" />
 			</div>
 		</form>
 	</div>

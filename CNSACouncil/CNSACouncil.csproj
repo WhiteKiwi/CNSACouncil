@@ -89,6 +89,7 @@
     <Content Include="admin\AdminSetting.aspx" />
     <Content Include="admin\AllowPetition.aspx" />
     <Content Include="admin\Default.aspx" />
+    <Content Include="admin\DelayedPetition.aspx" />
     <Content Include="admin\Login.aspx" />
     <Content Include="admin\Logout.aspx" />
     <Content Include="admin\PetitionManagement.aspx" />
@@ -521,6 +522,13 @@
     </Compile>
     <Compile Include="admin\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\DelayedPetition.aspx.cs">
+      <DependentUpon>DelayedPetition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\DelayedPetition.aspx.designer.cs">
+      <DependentUpon>DelayedPetition.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

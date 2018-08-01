@@ -9,9 +9,11 @@
 
 	<!-- Petition 분류 선택 -->
 	<% 
-		string[] order = { "", "" };
+		string[] order = { "", "", "" };
 		if (Request.QueryString["state"] == "awaitingAnswer") {
 			order[1] = " active";
+		} else if (Request.QueryString["state"] == "delayed") {
+			order[2] = " active";
 		} else {
 			order[0] = " active";
 		}
@@ -19,8 +21,9 @@
 	<!-- Petition Tab -->
 	<div>
 		<ul class="selection-tab border-bottom">
-			<li class="border-right<%=order[0]%> w-50"><a href="/admin/PetitionManagement.aspx">승인 대기중</a></li>
-			<li class="border-right<%=order[1]%> w-50"><a href="/admin/PetitionManagement.aspx?state=awaitingAnswer">답변 대기중</a></li>
+			<li class="border-right<%=order[0]%>" style="width: 33.3%;"><a href="/admin/PetitionManagement.aspx">승인 대기중</a></li>
+			<li class="border-right<%=order[1]%>" style="width: 33.3%;"><a href="/admin/PetitionManagement.aspx?state=awaitingAnswer">답변 대기중</a></li>
+			<li class="border-right<%=order[2]%>" style="width: 33.3%;"><a href="/admin/PetitionManagement.aspx?state=delayed">지연됨</a></li>
 		</ul>
 	</div>
 
@@ -43,7 +46,14 @@
 							<h5 class="right-date">등록 기간 :  <span class="petition-at"><%#DateTime.Parse(Eval("PetitionAt").ToString()).ToString("yyyy-MM-dd")%></span></h5>
 							<h5>&nbsp;~ <%#DateTime.Parse(Eval("PetitionAt").ToString()).AddMonths(1).AddHours(9).ToString("yyyy-MM-dd")%></h5>
 							<br />
-							<a href="/admin/<%= Request.QueryString["state"] == "awaitingAnswer" ? "Answer" : "Allow" %>Petition.aspx?id=<%# Eval("ID")%>" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
+							<a href="/admin/<% 
+								if (Request.QueryString["state"] == "awaitingAnswer")
+									Response.Write("Answer");
+								else if (Request.QueryString["state"] == "delayed")
+									Response.Write("Delayed");
+								else
+									Response.Write("Allow"); %>Petition.aspx?id=<%# Eval("ID")%>"
+								class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
 						</div>
 					</div>
 				</div>
@@ -112,6 +122,8 @@
 				$(".agrees", div).html(petition.find("Agrees").text());
 				if (getParameterByName("state") == "awaitingAnswer")
 					$(".petition-link", div).attr('href', '/admin/ReplyPetition.aspx?id=' + petition.find("ID").text());
+				else if (getParameterByName("state") == "delayed")
+					$(".petition-link", div).attr('href', '/admin/DelayedPetition.aspx?id=' + petition.find("ID").text());
 				else
 					$(".petition-link", div).attr('href', '/admin/AllowPetition.aspx?id=' + petition.find("ID").text());
 				$("#petitions").append(div);

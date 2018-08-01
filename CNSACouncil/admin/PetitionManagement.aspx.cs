@@ -19,6 +19,8 @@ namespace CNSACouncil.admin {
 
 			if (stateValue == "awaitingAnswer") {
 				state = 1;
+			} else if (stateValue == "delayed") {
+				state = -1;
 			} else {
 				state = 0;
 			}
