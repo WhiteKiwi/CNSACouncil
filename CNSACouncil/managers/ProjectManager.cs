@@ -62,7 +62,8 @@ namespace CNSACouncil.Managers {
 						ID = (int)rdr["ID"],
 						Title = (string)rdr["Title"],
 						StartAt = (DateTime)rdr["StartAt"],
-						EndAt = (DateTime)rdr["EndAt"]
+						EndAt = (DateTime)rdr["EndAt"],
+						State = (int)rdr["State"]
 					});
 				}
 
@@ -95,7 +96,8 @@ namespace CNSACouncil.Managers {
 						Content = (string)rdr["Content"],
 						StartAt = (DateTime)rdr["StartAt"],
 						EndAt = (DateTime)rdr["EndAt"],
-						FileName = (string)rdr["FileName"]
+						FileName = (string)rdr["FileName"],
+						State = (int)rdr["State"]
 					};
 				}
 

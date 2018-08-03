@@ -16,5 +16,7 @@ namespace CNSACouncil.Models {
 		public DateTime EndAt { get; set; } // 종료일
 
 		public string FileName { get; set; } // 대표 사진 이름
+
+		public int State { get; set; } // 사업 상태 - 0: 진행중, 1: 완료
 	}
 }

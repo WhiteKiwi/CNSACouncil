@@ -36,10 +36,10 @@
 			<% var projects = CNSACouncil.Managers.ProjectManager.GetProjectsByStartAt(5);
 
 				foreach (var project in projects) {
-					bool isEnd = project.EndAt.ToString("yyyy-MM-dd") == "2014-03-01" ? false : true;
+					bool isEnd = project.State == 1;
 			%>
 			<div class="w-100 content-div">
-				<a href="/Project.aspx?id=<%= project.ID %>" class="content-link project">
+				<a href="/Project.aspx?id=<%= project.ID %>&state=<%= project.State %>" class="content-link project">
 					<h5 class="float-left"><%= project.Title %> (<%= project.StartAt.ToString("yyyy-MM-dd") %> ~ <%= isEnd ? project.EndAt.ToString("yyyy-MM-dd") : "" %>)</h5>
 				</a>
 				<h5 class="float-right content-sub color-<%= isEnd ? "gold" : "black" %>"><%= isEnd ? "진행 완료" : "진행중" %></h5>

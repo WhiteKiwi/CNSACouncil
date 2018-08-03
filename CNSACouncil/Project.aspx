@@ -1,9 +1,28 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/Students.Master" AutoEventWireup="true" CodeBehind="Project.aspx.cs" Inherits="CNSACouncil.AProject" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
 	<!-- Top Image -->
 	<img src="/assets/img/background-long.png" style="width: 100%;" />
+
+	<!-- Project 분류 선택 -->
+	<% 
+		string[] order = { "", "" };
+		if (Request.QueryString["state"] == "1") {
+			order[1] = " active";
+		} else {
+			order[0] = " active";
+		}
+	%>
+	<!-- Project Tab -->
+	<div>
+		<ul class="selection-tab border-bottom">
+			<li class="border-right<%=order[0]%>" style="width: 33.3%;"><a href="/Projects.aspx">진행중인 사업</a></li>
+			<li class="border-right<%=order[1]%>" style="width: 33.3%;"><a href="/Projects.aspx?state=finished">완료된 사업</a></li>
+			<li style="width: 33.3%;"><a href="/Suggest.aspx">건의하기</a></li>
+		</ul>
+	</div>
 
 	<%
 		CNSACouncil.Models.Project project;
@@ -18,6 +37,7 @@
 			project.Content = "존재하지 않는 사업입니다";
 			project.StartAt = Convert.ToDateTime("2014-03-01");
 			project.EndAt = Convert.ToDateTime("2014-03-01");
+			project.State = 0;
 		}
 	%>
 	<!-- 공지 -->
@@ -29,7 +49,7 @@
 			<div class="float-left">
 				<h5><b><%= project.Title %></b></h5>
 			</div>
-			<span class="float-right"><%= project.StartAt.ToString("yyyy-MM-dd") %> ~ <%= project.EndAt.ToString("yyyy-MM-dd") == "2014-03-01" ? "" : project.EndAt.ToString("yyyy-MM-dd") %></span>
+			<span class="float-right"><%= project.StartAt.ToString("yyyy-MM-dd") %> ~ <%= project.State == 0 ? project.EndAt.ToString("yyyy-MM-dd") : "" %></span>
 			<div class="clearfix"></div>
 		</div>
 		<hr class="hr-board" />
