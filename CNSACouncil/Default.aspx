@@ -80,11 +80,37 @@
 	</div>
 
 	<!-- Comming Soon -->
-	<div class="text-center p-5 petition-box" style="margin-left: 60px; margin-right: 60px;">
+	<div id="AboutUs" class="text-center p-5 petition-box" style="margin-left: 60px; margin-right: 60px;">
 		<img src="/assets/img/CommingSoon.png" width="600" />
 	</div>
 	<br />
 	<br />
+
+	<!-- Navbar - About us Active by scroll -->
+	<script>
+		var element_position = $('#AboutUs').offset().top;
+		var screen_height = $(window).height();
+		var activation_offset = 0.5;//determines how far up the the page the element needs to be before triggering the function
+		var activation_point = element_position - (screen_height * activation_offset);
+		var max_scroll_height = $('body').height() - screen_height - 5;//-5 for a little bit of buffer
+
+		//Does something when user scrolls to it OR
+		//Does it when user has reached the bottom of the page and hasn't triggered the function yet
+		$(window).on('scroll', function () {
+			var y_scroll_pos = window.pageYOffset;
+
+			var element_in_view = y_scroll_pos > activation_point;
+			var has_reached_bottom_of_page = max_scroll_height <= y_scroll_pos && !element_in_view;
+
+			if (element_in_view || has_reached_bottom_of_page) {
+				$('#nav1').removeClass("active");
+				$('#nav5').addClass("active");
+			} else {
+				$('#nav1').addClass("active");
+				$('#nav5').removeClass("active");
+			}
+		});
+	</script>
 
 	<!-- Navbar - HOME -->
 	<script>
