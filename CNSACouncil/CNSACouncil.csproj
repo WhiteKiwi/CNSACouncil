@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\AdminManagement.aspx" />
+    <Content Include="admin\Project.aspx" />
     <Content Include="admin\AdminSetting.aspx" />
     <Content Include="admin\AllowPetition.aspx" />
     <Content Include="admin\Default.aspx" />
@@ -93,6 +94,7 @@
     <Content Include="admin\Login.aspx" />
     <Content Include="admin\Logout.aspx" />
     <Content Include="admin\PetitionManagement.aspx" />
+    <Content Include="admin\ProjectCheck.aspx" />
     <Content Include="admin\ProjectManagement.aspx" />
     <Content Include="admin\AnswerPetition.aspx" />
     <Content Include="admin\SuggestionCheck.aspx" />
@@ -504,6 +506,13 @@
     <Compile Include="admin\AdminManagement.aspx.designer.cs">
       <DependentUpon>AdminManagement.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\Project.aspx.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Project.aspx.designer.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\AdminSetting.aspx.cs">
       <DependentUpon>AdminSetting.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -552,6 +561,13 @@
     </Compile>
     <Compile Include="admin\PetitionManagement.aspx.designer.cs">
       <DependentUpon>PetitionManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ProjectCheck.aspx.cs">
+      <DependentUpon>ProjectCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ProjectCheck.aspx.designer.cs">
+      <DependentUpon>ProjectCheck.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\ProjectManagement.aspx.cs">
       <DependentUpon>ProjectManagement.aspx</DependentUpon>
@@ -699,9 +715,7 @@
       <DependentUpon>UploadPetition.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="assets\images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
