@@ -99,6 +99,7 @@
     <Content Include="admin\SuggestionManagement.aspx" />
     <Content Include="admin\UploadNotice.aspx" />
     <Content Include="admin\AddProject.aspx" />
+    <Content Include="Project.aspx" />
     <Content Include="assets\css\nanumsquare.css" />
     <Content Include="Petition.aspx" />
     <Content Include="assets\CKEditor\adapters\jquery.js" />
@@ -593,6 +594,13 @@
     </Compile>
     <Compile Include="admin\AddProject.aspx.designer.cs">
       <DependentUpon>AddProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Project.aspx.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Project.aspx.designer.cs">
+      <DependentUpon>Project.aspx</DependentUpon>
     </Compile>
     <Compile Include="Petition.aspx.cs">
       <DependentUpon>Petition.aspx</DependentUpon>
