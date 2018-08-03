@@ -12,10 +12,10 @@
 	<link rel="shortcut icon" href="/assets/img/CSC.png" />
 
 	<!-- Bootstrap CSS Framework -->
-	<link rel="stylesheet" href="/assets/css/bootstrap.min.css?ver=0.4">
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css?ver=1.0">
 
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="/assets/css/style.css?ver=0.8">
+	<link rel="stylesheet" href="/assets/css/style.css?ver=1.0">
 </head>
 <body>
 	<form runat="server">
