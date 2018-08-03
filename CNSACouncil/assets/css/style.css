@@ -352,3 +352,11 @@ footer {
 		left: 1.15rem;
 		position: absolute;
 	}
+
+/* 학생회 사업 */
+.project-name {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	color: white;
+}
