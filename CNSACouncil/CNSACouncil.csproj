@@ -618,7 +618,6 @@
     <Compile Include="managers\AdminManager.cs" />
     <Compile Include="models\Admin.cs" />
     <Compile Include="models\Counsel.cs" />
-    <Compile Include="models\Story.cs" />
     <Compile Include="Notice.aspx.cs">
       <DependentUpon>Notice.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
