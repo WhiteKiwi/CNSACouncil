@@ -15,7 +15,7 @@
 	</div>
 
 	<!-- Projects -->
-	<div class="p-4" style="margin-top: -15px;">
+	<div class="p-5" style="margin-top: -15px;">
 		<div class="row">
 			<%
 				var projects = CNSACouncil.Managers.ProjectManager.GetProjects();
