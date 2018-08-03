@@ -40,7 +40,7 @@
 			project.State = 0;
 		}
 	%>
-	<!-- 공지 -->
+	<!-- 사업 -->
 	<div class="p-5 color-black">
 		<h3 class="p-2" style="color: #707070;">Project</h3>
 		<div class="board-bar"></div>
