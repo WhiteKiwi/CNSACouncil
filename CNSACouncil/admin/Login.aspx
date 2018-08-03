@@ -13,16 +13,16 @@
 	<link rel="shortcut icon" href="/assets/img/CSC.png" />
 
 	<!-- Bootstrap CSS Framework -->
-	<link rel="stylesheet" href="/assets/css/bootstrap.min.css?ver=0.3">
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css?ver=0.4">
 
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="/assets/css/style.css?ver=0.8">
 </head>
 <body>
 	<form runat="server">
-		<div class="p-5 border border-secondary">
+		<div class="p-5 border border-secondary rounded">
 			<div class="text-center" style="margin-top: -15px; padding-right: 15px; padding-bottom: 10px;">
-				<img src="/assets/img/Logo.png" width="330" />
+				<img src="/assets/img/Logo.png" width="280" />
 			</div>
 			<br />
 			<div>

@@ -6104,7 +6104,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .rounded {
-    border-radius: .25rem !important
+    border-radius: 2rem !important
 }
 
 .rounded-top {
