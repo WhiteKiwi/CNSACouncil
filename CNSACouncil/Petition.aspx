@@ -40,7 +40,8 @@
 	<div class="border border-secondary m-5 p-5" style="position: relative;">
 		<%if (state == 2) { %>
 		<div class="answer-rectangle">
-			<span>답변<br />완료</span>
+			<span>답변<br />
+				완료</span>
 		</div>
 		<% } %>
 		<h4><b><%= petition.Title %></b></h4>
@@ -77,4 +78,9 @@
 			}
 		%>
 	</div>
+
+	<!-- Navbar - Petition -->
+	<script>
+		document.getElementById("nav3").classList.add("active");
+	</script>
 </asp:Content>
