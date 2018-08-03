@@ -32,41 +32,20 @@
 			<hr class="hr-black" />
 			<h3>Projects</h3>
 			<br />
+
+			<% var projects = CNSACouncil.Managers.ProjectManager.GetProjectsByStartAt(5);
+
+				foreach (var project in projects) {
+					bool isEnd = project.EndAt.ToString("yyyy-MM-dd") == "2014-03-01" ? false : true;
+			%>
 			<div class="w-100 content-div">
-				<a href="/" class="content-link project">
-					<h5 class="float-left">학생회 홈페이지 제작 (2018-05-26~)</h5>
+				<a href="/Project.aspx?id=<%= project.ID %>" class="content-link project">
+					<h5 class="float-left"><%= project.Title %> (<%= project.StartAt.ToString("yyyy-MM-dd") %> ~ <%= isEnd ? project.EndAt.ToString("yyyy-MM-dd") : "" %>)</h5>
 				</a>
-				<h5 class="float-right content-sub color-gold">진행중</h5>
+				<h5 class="float-right content-sub color-<%= isEnd ? "gold" : "black" %>"><%= isEnd ? "진행 완료" : "진행중" %></h5>
 			</div>
 			<br />
-			<div class="w-100 content-div">
-				<a href="/" class="content-link project">
-					<h5 class="float-left">MSMP 사업 (2018-05-26~)</h5>
-				</a>
-				<h5 class="float-right content-sub">진행완료</h5>
-			</div>
-			<br />
-			<div class="w-100 content-div">
-				<a href="/" class="content-link project">
-					<h5 class="float-left">학생회 홈페이지 제작 (2018-05-26~)</h5>
-				</a>
-				<h5 class="float-right content-sub color-gold">진행중</h5>
-			</div>
-			<br />
-			<div class="w-100 content-div">
-				<a href="/" class="content-link project">
-					<h5 class="float-left">MSMP 사업 (2018-05-26~)</h5>
-				</a>
-				<h5 class="float-right content-sub">진행완료</h5>
-			</div>
-			<br />
-			<div class="w-100 content-div">
-				<a href="/" class="content-link project">
-					<h5 class="float-left">학생회 홈페이지 제작 (2018-05-26~)</h5>
-				</a>
-				<h5 class="float-right content-sub color-gold">진행중</h5>
-			</div>
-			<br />
+			<% } %>
 		</div>
 	</div>
 
