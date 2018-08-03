@@ -3,7 +3,7 @@
 namespace CNSACouncil.admin {
 	public partial class UploadNotice : System.Web.UI.Page {
 		protected void Page_Load(object sender, EventArgs e) {
-
+			Content.FilebrowserImageUploadUrl = "/admin/Upload.ashx";
 		}
 
 		protected void UploadButton_Click(object sender, EventArgs e) {

@@ -482,6 +482,7 @@
     <Content Include="assets\css\nanumsquare\NanumSquareR.ttf" />
     <Content Include="assets\css\nanumsquare\NanumSquareR.woff" />
     <Content Include="assets\css\nanumsquare\NanumSquareR.woff2" />
+    <Content Include="admin\Upload.ashx" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\CNSACouncil.pubxml" />
     <None Include="Web.Debug.config">
@@ -596,6 +597,9 @@
     </Compile>
     <Compile Include="admin\SuggestionManagement.aspx.designer.cs">
       <DependentUpon>SuggestionManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Upload.ashx.cs">
+      <DependentUpon>Upload.ashx</DependentUpon>
     </Compile>
     <Compile Include="admin\UploadNotice.aspx.cs">
       <DependentUpon>UploadNotice.aspx</DependentUpon>
