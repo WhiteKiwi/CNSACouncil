@@ -8,11 +8,14 @@
 
 	<!-- Project 분류 선택 -->
 	<% 
+		int state;
 		string[] order = { "", "" };
 		if (Request.QueryString["state"] == "finished") {
 			order[1] = " active";
+			state = 1;
 		} else {
 			order[0] = " active";
+			state = 0;
 		}
 	%>
 	<!-- Project Tab -->
@@ -23,10 +26,18 @@
 			<li style="width: 33.3%;"><a href="/Suggest.aspx">건의하기</a></li>
 		</ul>
 	</div>
-	
-	<!-- Comming Soon -->
-	<div class="text-center p-5 petition-box" style="margin: 50px;">
-		<img src="/assets/img/CommingSoon.png" width="600" />
+
+	<!-- Projects -->
+	<div class="p-4" style="margin-top: -15px;">
+		<div class="row">
+			<%
+				var projects = CNSACouncil.Managers.ProjectManager.GetProjectsByState(state);
+				foreach (var project in projects) {
+			%>
+			<div class=" w-50 float-left p-2"><a href="/Project.aspx?id=<%= project.ID %>&state=<%= state %>">
+				<img src="/assets/images/<%= project.FileName %>" width="100%" /></a></div>
+			<% } %>
+		</div>
 	</div>
 
 	<!-- Navbar - 학생회 사업 -->
