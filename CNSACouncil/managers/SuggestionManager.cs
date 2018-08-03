@@ -9,7 +9,7 @@ namespace CNSACouncil.Managers {
 		private const string SUGGESTIONS = "suggestions";
 
 		/// <summary>
-		/// 건의를 추가하는 함수
+		/// 건의를 추가하는 메서드
 		/// </summary>
 		/// <param name="suggestion">Suggestion class in Models</param>  
 		/// <see cref="Suggestion"/>
@@ -43,7 +43,7 @@ namespace CNSACouncil.Managers {
 		}
 
 		/// <summary>
-		/// 페이지에 해당하는 건의들을 반환하는 함수
+		/// 페이지에 해당하는 건의들을 반환하는 메서드
 		/// </summary>
 		/// <param name="page">요청한 페이지 번호</param>  
 		/// <see cref="Suggestion"/>
@@ -78,7 +78,7 @@ namespace CNSACouncil.Managers {
 		}
 
 		/// <summary>
-		/// State에 해당하는 건의의 개수를 반환하는 함수
+		/// State에 해당하는 건의의 개수를 반환하는 메서드
 		/// </summary>
 		/// <param name="state">건의 상태</param>  
 		/// <see cref="Suggestion"/>
@@ -98,7 +98,7 @@ namespace CNSACouncil.Managers {
 		}
 
 		/// <summary>
-		/// ID를 받아 지난 건의로 이동시키는 함수
+		/// ID를 받아 지난 건의로 이동시키는 메서드
 		/// </summary>
 		/// <param name="ID">건의 일련번호</param>  
 		/// <see cref="Suggestion"/>
@@ -107,7 +107,7 @@ namespace CNSACouncil.Managers {
 				conn.Open();
 
 				// Update Suggestion State
-				string sql = "UPDATE suggestions SET State='1' WHERE ID='" + ID + "';";
+				string sql = "UPDATE " + SUGGESTIONS + " SET State='1' WHERE ID='" + ID + "';";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 				cmd.ExecuteNonQuery();
 
