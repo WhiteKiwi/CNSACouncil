@@ -12,7 +12,7 @@
 	<div>
 		<ul class="selection-tab border-bottom">
 			<li class="border-right w-50 active"><a href="/admin/AddProject.aspx">사업 등록</a></li>
-			<li class="border-right w-50"><a href="/admin/ProjcetManagement.aspx">사업 관리</a></li>
+			<li class="border-right w-50"><a href="/admin/ProjectManagement.aspx">사업 관리</a></li>
 		</ul>
 	</div>
 
