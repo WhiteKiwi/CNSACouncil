@@ -8,7 +8,6 @@ namespace CNSACouncil.Managers {
 		// Table Name
 		private const string NOTICES = "notices";
 
-
 		/// <summary>
 		/// 공지를 추가하는 함수
 		/// </summary>
@@ -119,6 +118,38 @@ namespace CNSACouncil.Managers {
 					});
 				}
 
+				conn.Close();
+			}
+
+			return result;
+		}
+		
+		/// <summary>
+		 /// 공지를 가져오는 메서드
+		 /// </summary>
+		 /// <param name="id">공지 일련번호</param>  
+		 /// <see cref="Notice"/>
+		public static Notice GetNotice(int ID) {
+			Notice result = null;
+
+			// Connect to DB
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Command Text - Get Notice
+				string sql = "SELECT * FROM " + NOTICES + " WHERE ID='" + ID + "';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				var rdr = cmd.ExecuteReader();
+				if (rdr.Read()) {
+					result = new Notice {
+						ID = ID,
+						Title = (string)rdr["Title"],
+						Content = (string)rdr["Content"],
+						NoticeAt = (DateTime)rdr["NoticeAt"]
+					};
+				}
+
+				// Connection Close
 				conn.Close();
 			}
 
