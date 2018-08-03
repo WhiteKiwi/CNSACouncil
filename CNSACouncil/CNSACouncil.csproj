@@ -98,6 +98,7 @@
     <Content Include="admin\SuggestionCheck.aspx" />
     <Content Include="admin\SuggestionManagement.aspx" />
     <Content Include="admin\UploadNotice.aspx" />
+    <Content Include="admin\AddProject.aspx" />
     <Content Include="assets\css\nanumsquare.css" />
     <Content Include="Petition.aspx" />
     <Content Include="assets\CKEditor\adapters\jquery.js" />
@@ -586,6 +587,13 @@
     <Compile Include="admin\UploadNotice.aspx.designer.cs">
       <DependentUpon>UploadNotice.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\AddProject.aspx.cs">
+      <DependentUpon>AddProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AddProject.aspx.designer.cs">
+      <DependentUpon>AddProject.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Petition.aspx.cs">
       <DependentUpon>Petition.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -684,7 +692,9 @@
       <DependentUpon>UploadPetition.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="assets\images\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
