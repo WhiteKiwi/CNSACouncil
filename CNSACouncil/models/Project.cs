@@ -14,5 +14,7 @@ namespace CNSACouncil.Models {
 		public DateTime StartAt { get; set; } // 시작일
 
 		public DateTime EndAt { get; set; } // 종료일
+
+		public string FileName { get; set; } // 대표 사진 이름
 	}
 }
