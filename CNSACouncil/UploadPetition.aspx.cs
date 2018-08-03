@@ -27,8 +27,10 @@ namespace CNSACouncil {
 					PetitionAt = DateTime.Now.AddHours(9)
 				}) == 0)
 					Response.Write("<script>alert('청원에 실패했습니다. 다시 시도해주세요.');</script>");
-				else
+				else {
+					PetitionButton.Enabled = true;
 					Response.Redirect("/Petitions.aspx");
+				}
 			}
 
 			PetitionButton.Enabled = true;

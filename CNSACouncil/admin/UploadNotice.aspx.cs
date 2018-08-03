@@ -21,11 +21,13 @@ namespace CNSACouncil.admin {
 					NoticeAt = DateTime.Now.AddHours(9)
 				}) == 0)
 					Response.Write("<script>alert('건의에 실패했습니다. 다시 시도해주세요.');</script>");
-				else
+				else {
+					UploadButton.Enabled = true;
 					Response.Redirect("/admin/UploadNotice.aspx");
+				}
 			}
 
-			UploadButton.Enabled = false;
+			UploadButton.Enabled = true;
 		}
 	}
 }

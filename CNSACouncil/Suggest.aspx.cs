@@ -22,8 +22,10 @@ namespace CNSACouncil {
 					SuggestAt = DateTime.Now.AddHours(9)
 				}) == 0)
 					Response.Write("<script>alert('건의에 실패했습니다. 다시 시도해주세요.');</script>");
-				else
+				else {
+					SuggestButton.Enabled = true;
 					Response.Redirect("/Suggest.aspx");
+				}
 			}
 
 			SuggestButton.Enabled = true;
