@@ -74,6 +74,37 @@ namespace CNSACouncil.Managers {
 		}
 
 		/// <summary>
+		/// 사업들을 State에 따라 반환하는 메서드
+		/// </summary>
+		/// <see cref="Project"/>
+		public static List<Project> GetProjectsByState(int state) {
+			var result = new List<Project>();
+
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Get Projects
+				string sql = "SELECT * FROM " + PROJECTS + " WHERE State='" + state + "';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				var rdr = cmd.ExecuteReader();
+
+				while (rdr.Read()) {
+					result.Add(new Project {
+						ID = (int)rdr["ID"],
+						Title = (string)rdr["Title"],
+						StartAt = (DateTime)rdr["StartAt"],
+						EndAt = (DateTime)rdr["EndAt"],
+						FileName = (string)rdr["FileName"]
+					});
+				}
+
+				conn.Close();
+			}
+
+			return result;
+		}
+
+		/// <summary>
 		/// 사업을 가져오는 메서드
 		/// </summary>
 		/// <param name="id">사업 일련번호</param>  
