@@ -9,7 +9,7 @@ namespace CNSACouncil.Managers {
 		private const string NOTICES = "notices";
 
 		/// <summary>
-		/// 공지를 추가하는 함수
+		/// 공지를 추가하는 메서드
 		/// </summary>
 		/// <param name="notice">Notice class in Models</param>  
 		/// <see cref="Notice"/>
@@ -42,7 +42,7 @@ namespace CNSACouncil.Managers {
 		}
 
 		/// <summary>
-		/// 페이지에 해당하는 공지들을 반환하는 함수
+		/// 페이지에 해당하는 공지들을 반환하는 메서드
 		/// </summary>
 		/// <param name="page">요청한 페이지 번호</param>  
 		/// <see cref="Notice"/>
@@ -77,7 +77,7 @@ namespace CNSACouncil.Managers {
 		}
 
 		/// <summary>
-		/// 공지의 개수를 반환하는 함수
+		/// 공지의 개수를 반환하는 메서드
 		/// </summary>
 		/// <see cref="Notice"/>
 		public static int GetNoticeCount() {
@@ -96,7 +96,7 @@ namespace CNSACouncil.Managers {
 		}
 
 		/// <summary>
-		/// 메인 페이지 리스팅을 위해 공지를 최신순으로 가져오는 함수
+		/// 메인 페이지 리스팅을 위해 공지를 최신순으로 가져오는 메서드
 		/// </summary>
 		/// <see cref="Notice"/>
 		public static List<Notice> GetNoticesByNoticeAt(int count) {

@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using CNSACouncil.Models;
+﻿using CNSACouncil.Models;
 using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
 
 namespace CNSACouncil.Managers {
 	public static class ProjectManager {
@@ -40,6 +40,36 @@ namespace CNSACouncil.Managers {
 
 				return result;
 			}
+		}
+
+		/// <summary>
+		/// 메인 페이지 리스팅을 위해 사업들을 최신순으로 가져오는 메서드
+		/// </summary>
+		/// <see cref="Project"/>
+		public static List<Project> GetProjectsByStartAt(int count) {
+			var result = new List<Project>();
+
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Get Projects
+				string sql = "SELECT * FROM " + PROJECTS + " ORDER BY StartAt DESC LIMIT " + count + ";";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				var rdr = cmd.ExecuteReader();
+
+				while (rdr.Read()) {
+					result.Add(new Project {
+						ID = (int)rdr["ID"],
+						Title = (string)rdr["Title"],
+						StartAt = (DateTime)rdr["StartAt"],
+						EndAt = (DateTime)rdr["EndAt"]
+					});
+				}
+
+				conn.Close();
+			}
+
+			return result;
 		}
 	}
 }
