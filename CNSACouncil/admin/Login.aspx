@@ -39,7 +39,7 @@
 
 	<!-- Copyright -->
 	<footer>
-		<span>Copyright © 2018 Copyright 5th CNSA Student Council All Rights Reserved</span>
+		<span>Copyright © 2018 Copyright 장지훈, 최소정 All Rights Reserved</span>
 	</footer>
 </body>
 </html>
