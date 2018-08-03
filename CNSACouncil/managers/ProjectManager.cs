@@ -9,6 +9,25 @@ namespace CNSACouncil.Managers {
 		private const string PROJECTS = "projects";
 
 		/// <summary>
+		/// ID와 마감일를 받아 완료된 사업으로 체크하는 메서드 추가
+		/// </summary>
+		/// <param name="ID">사업 일련번호</param>  
+		/// <param name="endAt">사업 완료일</param>  
+		/// <see cref="Project"/>
+		public static void ProjectCheck(string ID, string endAt) {
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Update Suggestion State
+				string sql = "UPDATE " + PROJECTS + " SET State='1', EndAt='"+endAt+"' WHERE ID='" + ID + "';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				cmd.ExecuteNonQuery();
+
+				conn.Close();
+			}
+		}
+
+		/// <summary>
 		/// 사업을 추가하는 메서드
 		/// </summary>
 		/// <param name="project">Project class in Models</param>  
