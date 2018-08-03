@@ -71,5 +71,39 @@ namespace CNSACouncil.Managers {
 
 			return result;
 		}
+
+		/// <summary>
+		/// 사업을 가져오는 메서드
+		/// </summary>
+		/// <param name="id">사업 일련번호</param>  
+		/// <see cref="Project"/>
+		public static Project GetProject(int ID) {
+			Project result = null;
+
+			// Connect to DB
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Command Text - Get Notice
+				string sql = "SELECT * FROM " + PROJECTS + " WHERE ID='" + ID + "';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				var rdr = cmd.ExecuteReader();
+				if (rdr.Read()) {
+					result = new Project {
+						ID = ID,
+						Title = (string)rdr["Title"],
+						Content = (string)rdr["Content"],
+						StartAt = (DateTime)rdr["StartAt"],
+						EndAt = (DateTime)rdr["EndAt"],
+						FileName = (string)rdr["FileName"]
+					};
+				}
+
+				// Connection Close
+				conn.Close();
+			}
+
+			return result;
+		}
 	}
 }

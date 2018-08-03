@@ -123,12 +123,12 @@ namespace CNSACouncil.Managers {
 
 			return result;
 		}
-		
+
 		/// <summary>
-		 /// 공지를 가져오는 메서드
-		 /// </summary>
-		 /// <param name="id">공지 일련번호</param>  
-		 /// <see cref="Notice"/>
+		/// 공지를 가져오는 메서드
+		/// </summary>
+		/// <param name="id">공지 일련번호</param>  
+		/// <see cref="Notice"/>
 		public static Notice GetNotice(int ID) {
 			Notice result = null;
 
