@@ -66,7 +66,7 @@
 		<br />
 		<% 
 			} else {
-				if (DateTime.Compare(petition.PetitionAt, DateTime.Now.AddDays(30)) >= 0) {
+				if (DateTime.Compare(petition.PetitionAt, DateTime.Now.AddDays(-30)) >= 0) {
 		%>
 		<!-- 답변이 존재하지 않을 시 공감버튼 -->
 		<br />
