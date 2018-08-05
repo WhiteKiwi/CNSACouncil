@@ -16,14 +16,14 @@ namespace CNSACouncil {
 		}
 
 		public static DataSet GetPetitionsData(int page, string order) {
-			string sql = "SELECT * FROM petitions WHERE State='" + 1 + "' AND (DATE_ADD(NOW(), INTERVAL -1 MONTH ) < PetitionAt) ORDER BY ID DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
-			string countSql = "SELECT count(*) FROM petitions WHERE State='" + 1 + "' AND (DATE_ADD(NOW(), INTERVAL -1 MONTH ) < PetitionAt) ORDER BY ID DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
+			string sql = "SELECT * FROM petitions WHERE State='" + 1 + "' AND (DATE_ADD(NOW(), INTERVAL -30 DAY ) < PetitionAt) ORDER BY ID DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
+			string countSql = "SELECT count(*) FROM petitions WHERE State='" + 1 + "' AND (DATE_ADD(NOW(), INTERVAL -30 DAY ) < PetitionAt) ORDER BY ID DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
 			if (order == "best") {
-				sql = "SELECT * FROM petitions WHERE State='" + 1 + "' AND (DATE_ADD(NOW(), INTERVAL -1 MONTH ) < PetitionAt) ORDER BY Agrees DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
-				countSql = "SELECT count(*) FROM petitions WHERE State='" + 1 + "' AND (DATE_ADD(NOW(), INTERVAL -1 MONTH ) < PetitionAt) ORDER BY Agrees DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
+				sql = "SELECT * FROM petitions WHERE State='" + 1 + "' AND (DATE_ADD(NOW(), INTERVAL -30 DAY) < PetitionAt) ORDER BY Agrees DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
+				countSql = "SELECT count(*) FROM petitions WHERE State='" + 1 + "' AND (DATE_ADD(NOW(), INTERVAL -30 DAY ) < PetitionAt) ORDER BY Agrees DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
 			} else if (order == "finished") {
-				sql = "SELECT * FROM petitions WHERE State='" + 1 + "' AND (DATE_ADD(NOW(), INTERVAL -1 MONTH ) >= PetitionAt) ORDER BY ID DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
-				countSql = "SELECT count(*) FROM petitions WHERE State='" + 1 + "' AND (DATE_ADD(NOW(), INTERVAL -1 MONTH ) >= PetitionAt) ORDER BY ID DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
+				sql = "SELECT * FROM petitions WHERE State='" + 1 + "' AND (DATE_ADD(NOW(), INTERVAL -30 DAY ) >= PetitionAt) ORDER BY ID DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
+				countSql = "SELECT count(*) FROM petitions WHERE State='" + 1 + "' AND (DATE_ADD(NOW(), INTERVAL -30 DAY ) >= PetitionAt) ORDER BY ID DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
 			} else if (order == "answer") {
 				sql = "SELECT * FROM petitions WHERE State='" + 2 + "' ORDER BY ID DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
 				countSql = "SELECT count(*) FROM petitions WHERE State='" + 2 + "' ORDER BY ID DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";

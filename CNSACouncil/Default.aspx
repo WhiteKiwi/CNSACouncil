@@ -69,7 +69,7 @@
 					<h6>등록인 :  <%= petition.UserID.Substring(0, 2) + "****" %></h6>
 					<h6 class="color-gold">동의 인원 :  <%= petition.Agrees %>명</h6>
 					<h6 class="right-date">등록 기간 :  <%= petition.PetitionAt.ToString("yyyy-MM-dd") %></h6>
-					<h6>&nbsp;~ <%= petition.PetitionAt.AddMonths(1).ToString("yyyy-MM-dd") %></h6>
+					<h6>&nbsp;~ <%= petition.PetitionAt.AddDays(30).ToString("yyyy-MM-dd") %></h6>
 					<br />
 					<a href="/Petition.aspx?order=best&id=<%= petition.ID %>" class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
 				</div>

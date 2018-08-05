@@ -46,7 +46,7 @@
 		<% } %>
 		<h4><b><%= petition.Title %></b></h4>
 		<div class="color-gray p-2">
-			<span>등록인: <%= petition.UserID.Substring(0, 2) + "****" %></span><span style="margin: 20px;">｜</span><span>청원기간 :  <%= petition.PetitionAt.ToString("yyyy-MM-dd") %> ~ <%= petition.PetitionAt.AddMonths(1).ToString("yyyy-MM-dd") %></span><span style="margin: 20px;">｜</span><span class="color-red"><%= petition.Agrees %>명의 공감</span>
+			<span>등록인: <%= petition.UserID.Substring(0, 2) + "****" %></span><span style="margin: 20px;">｜</span><span>청원기간 :  <%= petition.PetitionAt.ToString("yyyy-MM-dd") %> ~ <%= petition.PetitionAt.AddDays(30).ToString("yyyy-MM-dd") %></span><span style="margin: 20px;">｜</span><span class="color-red"><%= petition.Agrees %>명의 공감</span>
 		</div>
 		<br />
 		<div class="color-black"><%= petition.Content %></div>
@@ -66,7 +66,7 @@
 		<br />
 		<% 
 			} else {
-				if (DateTime.Compare(petition.PetitionAt, DateTime.Now.AddMonths(-1)) >= 0) {
+				if (DateTime.Compare(petition.PetitionAt, DateTime.Now.AddDays(30)) >= 0) {
 		%>
 		<!-- 답변이 존재하지 않을 시 공감버튼 -->
 		<br />

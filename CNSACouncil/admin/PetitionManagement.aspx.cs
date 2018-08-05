@@ -25,7 +25,7 @@ namespace CNSACouncil.admin {
 				state = 0;
 			}
 
-			string sql = "SELECT * FROM petitions WHERE State='" + state + "' ORDER BY ID DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
+			string sql = "SELECT * FROM petitions WHERE State='" + state + "' AND (DATE_ADD(NOW(), INTERVAL -30 DAY ) < PetitionAt) ORDER BY ID DESC LIMIT 5 OFFSET " + ((page - 1) * elementCount) + ";";
 			MySqlCommand cmd = new MySqlCommand(sql);
 
 			return GetData(cmd, state);
