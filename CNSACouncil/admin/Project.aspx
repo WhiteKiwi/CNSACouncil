@@ -37,7 +37,7 @@
 			<div class="clearfix"></div>
 		</div>
 		<hr class="hr-board" />
-		<div class="p-4">
+		<div class="container p-4">
 			<img src="/assets/images/<%= project.FileName %>" width="100%" />
 			<br />
 			<br />
