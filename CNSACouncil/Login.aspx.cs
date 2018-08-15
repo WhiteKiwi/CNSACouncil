@@ -22,8 +22,29 @@ namespace CNSACouncil {
 				if (!responseData.Contains("/login/userLogin")) {
 					// 로그인 성공 시 세션 저장
 					Session["UserID"] = UserID.Text;
-					// 메인 화면으로 Redirect
-					Response.Redirect("/Petitions.aspx");
+
+					if (Request.QueryString["classification"] != null) {
+						int classification = int.Parse(Request.QueryString["classification"]);
+						if (classification == 0) {
+							// 0이면 공지
+							Response.Redirect("/Notice.aspx?id=" + Request.QueryString["id"]);
+						} else if (classification == 1) {
+							// 1이면 청원
+							if (Request.QueryString["id"] != null) {
+								// id가 존재하면 청원으로 이동
+								Response.Redirect("/Petition.aspx?order=" + Request.QueryString["order"] + "&id=" + Request.QueryString["id"]);
+							} else {
+								// id가 존재하지 않으면 청원 등록으로 이동
+								Response.Redirect("/UploadPetition.aspx");
+							}
+						} else if (classification == 2) {
+							// 2이면 사업
+							Response.Redirect("/Project.aspx?id=" + Request.QueryString["id"] + "&state=" + Request.QueryString["state"]);
+						}
+					} else {
+						// 메인 화면으로 Redirect
+						Response.Redirect("/");
+					}
 				} else {
 					// 로그인 실패
 					Response.Write("<script>alert('로그인에 실패하였습니다.');</script>");
