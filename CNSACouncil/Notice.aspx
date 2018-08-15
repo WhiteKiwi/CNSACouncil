@@ -41,6 +41,7 @@
 	<div class="text-right p-5" style="margin-right: 1.5rem;">
 		<a href="/Notices.aspx" class="btn btn-lg btn-warning btn-square" role="button">목록</a>
 	</div>
+
 	<form runat="server" class="p-5" style="padding-top: 0 !important;">
 		<div class="board-bar-gold"></div>
 		<h4 class="color-gold">COMMENT</h4>
