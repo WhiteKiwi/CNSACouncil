@@ -12,7 +12,7 @@ namespace CNSACouncil {
 				Response.Write("<script>alert('내용을 입력해주세요.');</script>");
 			} else if (Session["UserID"] == null) {
 				// 로그인 페이지로 Redirect
-				Response.Redirect("/Login.aspx?classification=0&id=" + int.Parse(Request.QueryString["id"]));
+				Response.Redirect("/Login.aspx?classification=0&id=" + Request.QueryString["id"]);
 			} else {
 				CommentButton.Enabled = false;
 
