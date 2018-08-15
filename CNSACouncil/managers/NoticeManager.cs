@@ -106,7 +106,7 @@ namespace CNSACouncil.Managers {
 				conn.Open();
 
 				// Get Notices
-				string sql = "SELECT * FROM " + NOTICES + " ORDER BY NoticeAt DESC LIMIT " + count + ";";
+				string sql = "SELECT * FROM " + NOTICES + " ORDER BY ID DESC, NoticeAt DESC LIMIT " + count + ";";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 				var rdr = cmd.ExecuteReader();
 
