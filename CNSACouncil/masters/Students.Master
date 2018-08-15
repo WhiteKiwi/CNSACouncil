@@ -9,7 +9,7 @@
 	<title>충남삼성고등학교 학생회</title>
 
 	<!-- Icon -->
-	<link rel="shortcut icon" href="/assets/img/CSC.png" />
+	<link rel="shortcut icon" href="/assets/img/favicon-csc.png" />
 
 	<!-- Bootstrap CSS Framework -->
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css?ver=1.0">

@@ -101,6 +101,10 @@
     <Content Include="admin\SuggestionManagement.aspx" />
     <Content Include="admin\UploadNotice.aspx" />
     <Content Include="admin\AddProject.aspx" />
+    <Content Include="assets\img\favicon-16x16.png" />
+    <Content Include="assets\img\favicon-32x32.png" />
+    <Content Include="assets\img\favicon-96x96.png" />
+    <Content Include="assets\img\favicon.ico" />
     <Content Include="Project.aspx" />
     <Content Include="assets\css\nanumsquare.css" />
     <Content Include="Petition.aspx" />
