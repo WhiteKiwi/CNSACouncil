@@ -6,7 +6,7 @@ namespace CNSACouncil {
 			// 세션이 비어 있을 경우
 			if (Session["UserID"] == null) {
 				// 로그인 페이지로 Redirect
-				Response.Redirect("/Login.aspx");
+				Response.Redirect("/Login.aspx?classification=1");
 			}
 		}
 
