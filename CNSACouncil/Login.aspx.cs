@@ -13,6 +13,7 @@ namespace CNSACouncil {
 			else if (string.IsNullOrEmpty(UserPW.Text.Trim())) // PW가 비어있을 경우
 				Response.Write("<script>alert('PW를 입력해주세요.');</script>");
 			else {
+				// TODO: 비밀번호가 길면 로그인에 실패하는 에러 해결
 				string responseData = Encoding.UTF8.GetString(new LoginWebClient().UploadValues("https://student.cnsa.hs.kr/login/userLogin", new System.Collections.Specialized.NameValueCollection() {
 					{ "loginId", UserID.Text },
 					{ "loginPw", UserPW.Text }

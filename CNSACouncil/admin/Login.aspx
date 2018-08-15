@@ -10,13 +10,13 @@
 	<title>충남삼성고등학교 학생회 - 관리자 로그인</title>
 
 	<!-- Icon -->
-	<link rel="shortcut icon" href="/assets/img/CSC.png" />
+	<link rel="shortcut icon" href="/assets/img/favicon-csc.png" />
 
 	<!-- Bootstrap CSS Framework -->
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css?ver=1.0">
 
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="/assets/css/style.css?ver=1.0">
+	<link rel="stylesheet" href="/assets/css/style.css?ver=1.1">
 </head>
 <body>
 	<form runat="server">
