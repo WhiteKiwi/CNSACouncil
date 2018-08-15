@@ -275,9 +275,41 @@ footer {
 		overflow: hidden;
 	}
 
+/* 댓글 Item */
+.comment-element {
+	margin-top: 1rem;
+	display: flex;
+}
+
+	.comment-element > span:nth-child(1) {
+		float: left;
+		width: 100px;
+	}
+
+	.comment-element > span:nth-child(2) {
+		float: left;
+		margin-left: 70px;
+	}
+
+	.comment-element > span:nth-child(3) {
+		float: right;
+		text-align: right;
+		width: 200px;
+	}
+
+	.comment-element > span {
+		width: calc(100% - 380px);
+	}
+
 /* 게시판 굵은 선 */
 .board-bar {
 	background-color: #707070;
+	height: 2px;
+	margin-bottom: 1rem;
+}
+
+.board-bar-gold {
+	background-color: #F3B120;
 	height: 2px;
 	margin-bottom: 1rem;
 }
@@ -359,4 +391,9 @@ footer {
 	top: 30px;
 	left: 30px;
 	color: white;
+}
+
+/* 사용자 resize 불가 */
+.noresize {
+	resize: none;
 }
