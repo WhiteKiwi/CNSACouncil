@@ -41,6 +41,31 @@
 	<div class="text-right p-5" style="margin-right: 1.5rem;">
 		<a href="/Notices.aspx" class="btn btn-lg btn-warning btn-square" role="button">목록</a>
 	</div>
+	<form runat="server" class="p-5" style="padding-top: 0 !important;">
+		<div class="board-bar-gold"></div>
+		<h4 class="color-gold">COMMENT</h4>
+		<div style="margin-top: 15px;">
+			<div style="width: calc(100% - 120px); float: left; margin-right: 15px;">
+				<asp:TextBox runat="server" ID="Content" CssClass="form-control noresize" TextMode="MultiLine" Rows="3" placeholder="댓글 작성 시 주의사항:&#10;로그인 후에만 댓글 등록이 가능합니다.&#10;한 번 작성한 댓글은 삭제 할 수 없으니 신중하게 생각하고 댓글을 작성해 주세요."></asp:TextBox>
+			</div>
+			<div>
+				<asp:Button runat="server" ID="CommentButton" CssClass="btn btn-lg btn-warning btn-square" Text="등록" Style="width: 86px; height: 86px;" OnClick="CommentButton_Click" />
+			</div>
+		</div>
+		<br />
+		<div class="board-bar"></div>
+		<%
+			var commentList = CNSACouncil.Managers.CommentManager.GetComments(int.Parse(Request.QueryString["id"]), 0);
+
+			foreach (var comment in commentList) {
+		%>
+		<div class="comment-element">
+			<span><%= comment.WriterID %></span>
+			<span><%= comment.Content %></span>
+			<span><%= comment.CommentAt.ToString("yyyy-MM-dd '/' HH:mm") %></span>
+		</div>
+		<% } %>
+	</form>
 
 	<!-- Navbar - Notice -->
 	<script>
