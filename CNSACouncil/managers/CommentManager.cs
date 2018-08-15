@@ -8,6 +8,5 @@ namespace CNSACouncil.Managers {
 		// Table Name
 		private const string COMMENTS = "comments";
 
-		}
 	}
 }
