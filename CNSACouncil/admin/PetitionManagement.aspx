@@ -53,7 +53,7 @@
 									Response.Write("Delayed");
 								else
 									Response.Write("Allow"); %>Petition.aspx?id=<%# Eval("ID")%>"
-								class="btn btn-lg btn-secondary btn-square btn-long" role="button">자세히 보기</a>
+								class="btn btn-lg btn-secondary btn-square btn-long petition-link" role="button">자세히 보기</a>
 						</div>
 					</div>
 				</div>
@@ -121,7 +121,7 @@
 				$(".petiiton-at", div).html(petition.find("PetitionAt").text());
 				$(".agrees", div).html(petition.find("Agrees").text());
 				if (getParameterByName("state") == "awaitingAnswer")
-					$(".petition-link", div).attr('href', '/admin/ReplyPetition.aspx?id=' + petition.find("ID").text());
+					$(".petition-link", div).attr('href', '/admin/AnswerPetition.aspx?id=' + petition.find("ID").text());
 				else if (getParameterByName("state") == "delayed")
 					$(".petition-link", div).attr('href', '/admin/DelayedPetition.aspx?id=' + petition.find("ID").text());
 				else
