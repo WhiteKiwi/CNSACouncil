@@ -222,6 +222,32 @@ namespace CNSACouncil.Managers {
 		}
 
 		/// <summary>
+		/// 청원 동의 여부를 반환하는 메서드
+		/// </summary>
+		/// <param name="ID">청원 일련번호</param>  
+		/// <param name="userID">User ID</param>  
+		/// <see cref="Petition"/>
+		public static bool IsAgree(string ID, string userID) {
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// 이미 동의 했는지 동의 여부 검사
+				string sql = "SELECT EXISTS(SELECT * FROM agrees WHERE PetitionID='" + ID + "' AND UserID='" + userID + "') AS SUCCESS;";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+
+				if (Convert.ToInt32(cmd.ExecuteScalar()) == 0) {
+					conn.Close();
+
+					return false;
+				} else {
+					conn.Close();
+
+					return true;
+				}
+			}
+		}
+
+		/// <summary>
 		/// 공감순으로 청원을 반환하는 메서드
 		/// </summary>
 		/// <param name="count">가져올 청원 개수</param>  
