@@ -36,7 +36,16 @@
 						<div class="col-md-7 color-black">
 							<h3 class="petition-box-title"><b class="title"><%# Eval("Title").ToString().Length > 18 ? Eval("Title").ToString().Substring(0, 18) + "..." : Eval("Title") %></b></h3>
 							<br />
-							<h5 class="petition-box-content"><%# Eval("Content").ToString().Replace("<br/>", " ").Length > 170 ? Eval("Content").ToString().Replace("<br/>", " ").Substring(0, 170) + "..." : Eval("Content").ToString().Replace("<br/>", " ")%></h5>
+							<a href="/admin/<% 
+								if (Request.QueryString["state"] == "awaitingAnswer")
+									Response.Write("Answer");
+								else if (Request.QueryString["state"] == "delayed")
+									Response.Write("Delayed");
+								else
+									Response.Write("Allow"); %>Petition.aspx?id=<%# Eval("ID")%>"
+								style="text-decoration: none;" class="petition-link">
+								<h5 class="petition-box-content"><%# Eval("Content").ToString().Replace("<br/>", " ").Length > 170 ? Eval("Content").ToString().Replace("<br/>", " ").Substring(0, 170) + "..." : Eval("Content").ToString().Replace("<br/>", " ")%></h5>
+							</a>
 						</div>
 						<div class="col-md-1"></div>
 						<div class="col-md-4 color-black">

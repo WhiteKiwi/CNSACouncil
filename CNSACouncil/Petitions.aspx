@@ -48,7 +48,9 @@
 						<div class="col-md-7 color-black">
 							<h3 class="petition-box-title"><b class="title"><%# Eval("Title").ToString().Length > 18 ? Eval("Title").ToString().Substring(0, 18) + "..." : Eval("Title") %></b></h3>
 							<br />
-							<h5 class="petition-box-content"><%# Eval("Content").ToString().Replace("<br/>", " ").Length > 170 ? Eval("Content").ToString().Replace("<br/>", " ").Substring(0, 170) + "..." : Eval("Content").ToString().Replace("<br/>", " ")%></h5>
+							<a href="/Petition.aspx?order=<%= Request.QueryString["order"] %>&id=<%# Eval("ID")%>" class="petition-link" style="text-decoration: none;">
+								<h5 class="petition-box-content"><%# Eval("Content").ToString().Replace("<br/>", " ").Length > 170 ? Eval("Content").ToString().Replace("<br/>", " ").Substring(0, 170) + "..." : Eval("Content").ToString().Replace("<br/>", " ")%></h5>
+							</a>
 						</div>
 						<div class="col-md-1"></div>
 						<div class="col-md-4 color-black">

@@ -61,7 +61,9 @@
 				<div class="col-md-7 color-black">
 					<h3 class="petition-box-title"><b><%= petition.Title.Length > 18 ? petition.Title.Substring(0, 18) + "..." : petition.Title %></b></h3>
 					<br />
-					<h5 class="petition-box-content"><%= petition.Content.Replace("<br/>", " ").Length > 170 ? petition.Content.Replace("<br/>", " ").Substring(0, 170) + "..." : petition.Content %></h5>
+					<a href="/Petition.aspx?order=best&id=<%= petition.ID %>" class="petition-link" style="text-decoration: none;">
+						<h5 class="petition-box-content"><%= petition.Content.Replace("<br/>", " ").Length > 170 ? petition.Content.Replace("<br/>", " ").Substring(0, 170) + "..." : petition.Content %></h5>
+					</a>
 				</div>
 				<div class="col-md-1"></div>
 				<div class="col-md-4 color-black">
