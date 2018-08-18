@@ -49,7 +49,7 @@
 			<div class="float-left">
 				<h5><b><%= project.Title %></b></h5>
 			</div>
-			<span class="float-right"><%= project.StartAt.ToString("yyyy-MM-dd") %> ~ <%= project.State == 0 ? project.EndAt.ToString("yyyy-MM-dd") : "" %></span>
+			<span class="float-right"><%= project.StartAt.ToString("yyyy-MM-dd") %> ~ <%= project.State == 1 ? project.EndAt.ToString("yyyy-MM-dd") : "" %></span>
 			<div class="clearfix"></div>
 		</div>
 		<hr class="hr-board" />
