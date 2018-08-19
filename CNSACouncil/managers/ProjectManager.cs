@@ -158,7 +158,7 @@ namespace CNSACouncil.Managers {
 		/// <summary>
 		/// 사업을 가져오는 메서드
 		/// </summary>
-		/// <param name="id">사업 일련번호</param>  
+		/// <param name="ID">사업 일련번호</param>  
 		/// <see cref="Project"/>
 		public static Project GetProject(int ID) {
 			Project result = null;
@@ -188,6 +188,26 @@ namespace CNSACouncil.Managers {
 			}
 
 			return result;
+		}
+
+		/// <summary>
+		/// 사업을 수정 메서드
+		/// </summary>
+		/// <param name="ID">사업 일련번호</param>  
+		/// <see cref="Project"/>
+		public static void EditProject(Project project) {
+			// Connect to DB
+			using (var conn = new MySqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["COUNCILDB"].ConnectionString)) {
+				conn.Open();
+
+				// Command Text - Get Notice
+				string sql = "UPDATE " + PROJECTS + " SET Title='" + project.Title + "', Content='" + project.Content + "', StartAt='" + project.StartAt.ToString("yyyy-MM-dd") + "', EndAt='" + project.EndAt.ToString("yyyy-MM-dd") + "', State='" + project.State + "', FileName='" + project.FileName + "' WHERE ID='" + project.ID + "';";
+				MySqlCommand cmd = new MySqlCommand(sql, conn);
+				cmd.ExecuteNonQuery();
+
+				// Connection Close
+				conn.Close();
+			}
 		}
 	}
 }
