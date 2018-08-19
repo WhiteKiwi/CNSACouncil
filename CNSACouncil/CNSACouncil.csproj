@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\AdminManagement.aspx" />
+    <Content Include="admin\EditProject.aspx" />
     <Content Include="admin\Project.aspx" />
     <Content Include="admin\AdminSetting.aspx" />
     <Content Include="admin\AllowPetition.aspx" />
@@ -506,6 +507,13 @@
     </Compile>
     <Compile Include="admin\AdminManagement.aspx.designer.cs">
       <DependentUpon>AdminManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\EditProject.aspx.cs">
+      <DependentUpon>EditProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\EditProject.aspx.designer.cs">
+      <DependentUpon>EditProject.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\Project.aspx.cs">
       <DependentUpon>Project.aspx</DependentUpon>

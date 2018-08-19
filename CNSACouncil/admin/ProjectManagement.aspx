@@ -26,6 +26,7 @@
 				<a href="/admin/Project.aspx?id=<%= project.ID %>">
 					<img src="/assets/images/<%= project.FileName %>" width="100%" />
 				</a>
+				<a href="EditProject.aspx?id=<%= project.ID %>" class="btn btn-lg btn-secondary btn-square w-100" role="button">수정하기</a>
 				<% if (project.State == 0) { %>
 				<button type="button" class="btn btn-lg btn-secondary btn-square w-100" data-toggle="modal" data-target="#completeModal">사업 완료</button>
 
