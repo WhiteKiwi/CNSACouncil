@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
 	<!-- Top Image -->
-	<img src="/assets/img/background-long.png" style="width: 100%;" />
+	<img src="/assets/img/notices-banner.png" style="width: 100%;" />
 
 	<!-- 공지 -->
 	<div class="m-5 color-black">

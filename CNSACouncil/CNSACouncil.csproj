@@ -102,7 +102,12 @@
     <Content Include="admin\SuggestionManagement.aspx" />
     <Content Include="admin\UploadNotice.aspx" />
     <Content Include="admin\AddProject.aspx" />
+    <Content Include="assets\img\admin-banner.png" />
     <Content Include="assets\img\favicon-csc.png" />
+    <Content Include="assets\img\main-banner.png" />
+    <Content Include="assets\img\notices-banner.png" />
+    <Content Include="assets\img\petitions-banner.png" />
+    <Content Include="assets\img\projects-banner.png" />
     <Content Include="Project.aspx" />
     <Content Include="assets\css\nanumsquare.css" />
     <Content Include="Petition.aspx" />

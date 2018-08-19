@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
 	<!-- Top Image -->
-	<img src="/assets/img/background-long.png" style="width: 100%;" />
+	<img src="/assets/img/petitions-banner.png" style="width: 100%;" />
 
 	<form runat="server">
 		<!-- Petition 분류 선택 -->

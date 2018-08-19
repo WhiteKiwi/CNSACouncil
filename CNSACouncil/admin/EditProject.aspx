@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
 	<!-- Top Image -->
-	<img src="/assets/img/background-long.png" style="width: 100%;" />
+	<img src="/assets/img/admin-banner.png" style="width: 100%;" />
 
 	<!-- Project Tab -->
 	<div>
