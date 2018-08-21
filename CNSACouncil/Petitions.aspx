@@ -34,7 +34,7 @@
 	<div class="border-box-gold text-center">
 		<div class="container-fluid" style="padding-bottom: 20px;">
 			<h4>청원게시판은 5대 학생회의 공약으로 학생들의 여론을 빠르게 수렴하기 위하여 개설되었습니다.</h4>
-			<h4>학교의 제도, 행사, 시설에 대해 다수의 목소리가 모여 30일 동안 150명 이상의 학생 여러분이 추천한 '청원'에 대해서는 학생회 사업으로 추진한 후 결과를 공지하겠습니다.</h4>
+			<h4>학교의 제도, 행사, 시설에 대해 다수의 목소리가 모여 30일 동안 100명 이상의 학생 여러분이 추천한 '청원'에 대해서는 학생회 사업으로 추진한 후 결과를 공지하겠습니다.</h4>
 		</div>
 		<a href="/UploadPetition.aspx" class="btn btn-lg btn-warning btn-square w-25" role="button">지금 청원하기</a>
 	</div>
