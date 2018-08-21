@@ -123,7 +123,7 @@
 				$(".title", div).html(petition.find("Title").text());
 				var content = petition.find("Content").text();
 				if (content.length > 120)
-					$(".petition-box-content", div).html(petition.find("Content").text() + "...");
+					$(".petition-box-content", div).html(petition.find("Content").text().substring(0, 120) + "...");
 				else
 					$(".petition-box-content", div).html(petition.find("Content").text());
 				$(".user-id", div).html(petition.find("UserID").text().substring(0, 2) + "****");
