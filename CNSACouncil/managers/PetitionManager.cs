@@ -26,6 +26,7 @@ namespace CNSACouncil.Managers {
 				cmd.Parameters.Add("Content", MySqlDbType.VarChar).Value = petition.Content;
 				cmd.Parameters.Add("IP", MySqlDbType.VarChar).Value = petition.IP;
 				cmd.Parameters.Add("PetitionAt", MySqlDbType.DateTime).Value = petition.PetitionAt;
+				cmd.Parameters.Add("EndAt", MySqlDbType.DateTime).Value = petition.EndAt;
 
 				int result;
 				try {
@@ -134,6 +135,7 @@ namespace CNSACouncil.Managers {
 						Title = (string)rdr["Title"],
 						Content = (string)rdr["Content"],
 						PetitionAt = (DateTime)rdr["PetitionAt"],
+						EndAt = (DateTime)rdr["EndAt"],
 						Agrees = (int)rdr["Agrees"]
 					};
 
@@ -259,7 +261,7 @@ namespace CNSACouncil.Managers {
 				conn.Open();
 
 				// Get 2 Petition by Agrees
-				string sql = "SELECT * FROM petitions WHERE State='1' AND (DATE_ADD(NOW(), INTERVAL -1 MONTH ) < PetitionAt) ORDER BY Agrees DESC LIMIT " + count + ";";
+				string sql = "SELECT * FROM petitions WHERE State='1' AND EndAt > ADDTIME(NOW(), '09:00:00') ORDER BY Agrees DESC LIMIT " + count + ";";
 				MySqlCommand cmd = new MySqlCommand(sql, conn);
 				var rdr = cmd.ExecuteReader();
 				while (rdr.Read()) {
@@ -269,6 +271,7 @@ namespace CNSACouncil.Managers {
 						Content = (string)rdr["Content"],
 						UserID = (string)rdr["UserID"],
 						PetitionAt = (DateTime)rdr["PetitionAt"],
+						EndAt = (DateTime)rdr["EndAt"],
 						Agrees = (int)rdr["Agrees"]
 					});
 				}

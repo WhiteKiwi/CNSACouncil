@@ -24,7 +24,8 @@ namespace CNSACouncil {
 					Title = PetitionTitle.Text,
 					Content = Content.Text.Replace("\r\n", "<br/>"),
 					IP = Request.UserHostAddress,
-					PetitionAt = DateTime.Now.AddHours(9)
+					PetitionAt = DateTime.Now.AddHours(9),
+					EndAt = DateTime.Now.AddHours(9).AddDays(30)
 				}) == 0)
 					Response.Write("<script>alert('청원에 실패했습니다. 다시 시도해주세요.');</script>");
 				else {
