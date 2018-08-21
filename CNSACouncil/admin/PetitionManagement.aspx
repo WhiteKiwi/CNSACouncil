@@ -128,7 +128,7 @@
 					$(".petition-box-content", div).html(petition.find("Content").text());
 				$(".user-id", div).html(petition.find("UserID").text().substring(0, 2) + "****");
 				$(".petition-at", div).html(petition.find("PetitionAt").text().substring(0, 10));
-				$(".end-at", div).html(petition.find("EndAt").text());
+				$(".end-at", div).html(petition.find("EndAt").text().substring(0, 10));
 				$(".agrees", div).html(petition.find("Agrees").text());
 				if (getParameterByName("state") == "awaitingAnswer")
 					$(".petition-link", div).attr('href', '/admin/AnswerPetition.aspx?id=' + petition.find("ID").text());
