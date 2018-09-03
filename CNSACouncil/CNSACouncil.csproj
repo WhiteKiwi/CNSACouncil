@@ -108,6 +108,8 @@
     <Content Include="assets\img\notices-banner.png" />
     <Content Include="assets\img\petitions-banner.png" />
     <Content Include="assets\img\projects-banner.png" />
+    <Content Include="assets\js\jquery-1.8.3.min.js" />
+    <Content Include="assets\js\jquery-3.3.1.slim.min.js" />
     <Content Include="Project.aspx" />
     <Content Include="assets\css\nanumsquare.css" />
     <Content Include="Petition.aspx" />
@@ -454,7 +456,6 @@
     <Content Include="assets\CKEditor\styles.js" />
     <Content Include="assets\img\CommingSoon.png" />
     <Content Include="assets\img\loading.gif" />
-    <Content Include="assets\js\jquery-1.8.3.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Notice.aspx" />
@@ -465,7 +466,6 @@
     <Content Include="assets\img\CNSA.png" />
     <Content Include="assets\img\Logo.png" />
     <Content Include="assets\js\bootstrap.min.js" />
-    <Content Include="assets\js\jquery-3.3.1.slim.min.js" />
     <Content Include="assets\js\popper.min.js" />
     <Content Include="Default.aspx" />
     <Content Include="Petitions.aspx" />
@@ -503,7 +503,9 @@
     <Content Include="Suggest.aspx" />
     <Content Include="Projects.aspx" />
     <Content Include="UploadPetition.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin\AdminManagement.aspx.cs">

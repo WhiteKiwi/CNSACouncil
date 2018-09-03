@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masters/Admins.Master" AutoEventWireup="true" CodeBehind="AnswerPetition.aspx.cs" Inherits="CNSACouncil.admin.AnswerPetition" %>
 
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Contents" runat="server">
@@ -33,7 +35,7 @@
 		</div>
 		<br />
 		<form runat="server">
-			<asp:TextBox runat="server" ID="AnswerContent" CssClass="form-control" TextMode="MultiLine" Rows="10" placeholder="답변 내용을 입력하세요."></asp:TextBox>
+			<CKEditor:CKEditorControl ID="AnswerContent" BasePath="/assets/CKEditor/" runat="server" placeholder="답변 내용을 입력하세요."></CKEditor:CKEditorControl>
 			<br />
 			<br />
 			<div class="text-center">

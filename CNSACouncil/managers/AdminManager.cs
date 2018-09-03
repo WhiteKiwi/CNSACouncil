@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using CNSACouncil.Models;
+﻿using CNSACouncil.Models;
 using MySql.Data.MySqlClient;
+using System.Collections.Generic;
 
 namespace CNSACouncil.Managers {
 	public static class AdminManager {

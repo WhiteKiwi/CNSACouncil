@@ -4,7 +4,7 @@ using System;
 namespace CNSACouncil.admin {
 	public partial class AnswerPetition : System.Web.UI.Page {
 		protected void Page_Load(object sender, EventArgs e) {
-
+			Content.FilebrowserImageUploadUrl = "/admin/Upload.ashx";
 		}
 
 		protected void AnswerButton_Click(object sender, EventArgs e) {
