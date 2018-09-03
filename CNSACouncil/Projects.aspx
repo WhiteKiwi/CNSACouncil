@@ -34,7 +34,7 @@
 				var projects = CNSACouncil.Managers.ProjectManager.GetProjectsByState(state);
 				foreach (var project in projects) {
 			%>
-			<div class="col-md-6 p-2">
+			<div class="col-md-4 p-2">
 				<h1 class="project-name"><b><%= project.Title %></b></h1>
 				<a href="/Project.aspx?id=<%= project.ID %>&state=<%= state %>">
 				<img src="/assets/images/<%= project.FileName %>" width="100%" />

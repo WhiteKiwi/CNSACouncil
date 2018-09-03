@@ -21,7 +21,7 @@
 				var projects = CNSACouncil.Managers.ProjectManager.GetProjects();
 				foreach (var project in projects) {
 			%>
-			<div class=" w-50 float-left p-2">
+			<div class="col-md-4 float-left p-2">
 				<h1 class="project-name"><b><%= project.Title %></b></h1>
 				<a href="/admin/Project.aspx?id=<%= project.ID %>">
 					<img src="/assets/images/<%= project.FileName %>" width="100%" />
