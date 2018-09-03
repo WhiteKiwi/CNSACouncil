@@ -43,4 +43,9 @@
 			</div>
 		</form>
 	</div>
+
+	<!-- Navbar - Petition Management-->
+	<script>
+		document.getElementById("nav3").classList.add("active");
+	</script>
 </asp:Content>

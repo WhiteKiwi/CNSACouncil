@@ -32,4 +32,9 @@
 			<a href="/admin/PetitionManagement.aspx?state=delayed" class="btn btn-lg btn-danger btn-square w-25" role="button">돌아가기</a>
 		</div>
 	</div>
+
+	<!-- Navbar - Petition Management-->
+	<script>
+		document.getElementById("nav3").classList.add("active");
+	</script>
 </asp:Content>

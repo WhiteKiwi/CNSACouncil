@@ -33,4 +33,9 @@
 			<asp:Button runat="server" ID="DelayButton" CssClass="btn btn-lg btn-warning btn-square w-25" Text="지연하기" OnClick="DelayButton_Click" />
 		</form>
 	</div>
+
+	<!-- Navbar - Petition Management-->
+	<script>
+		document.getElementById("nav3").classList.add("active");
+	</script>
 </asp:Content>
