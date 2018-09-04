@@ -28,9 +28,9 @@
 				</a>
 				<a href="EditProject.aspx?id=<%= project.ID %>" class="btn btn-lg btn-secondary btn-square w-100" role="button">수정하기</a>
 				<% if (project.State == 0) { %>
-				<button type="button" class="btn btn-lg btn-secondary btn-square w-100" data-toggle="modal" data-target="#completeModal">사업 완료</button>
+				<button type="button" class="btn btn-lg btn-secondary btn-square w-100" data-toggle="modal" data-target="#completeModal<%= project.ID %>">사업 완료</button>
 
-				<div class="modal fade" id="completeModal" tabindex="-1" role="dialog" aria-labelledby="completeModalLabel" aria-hidden="true">
+				<div class="modal fade" id="completeModal<%= project.ID %>" tabindex="-1" role="dialog" aria-labelledby="completeModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">
 						<form class="modal-content p-5" method="post" action="/admin/ProjectCheck.aspx">
 							<h4 class="color-gray"><b>사업 마감일</b></h4>
