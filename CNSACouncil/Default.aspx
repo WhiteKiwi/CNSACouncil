@@ -243,7 +243,7 @@
             <span>학생회에서 제일 정상입니다</span><br />
             <span>정말입니다</span><br />
             <span>초콜릿 좋아해요 초콜릿 주세요</span><br />
-            <span class="delete-line">학생회 간식이 일주일만에</span>
+            <span class="delete-line">학생회 간식이 일주일만에</span><br />
             <span class="delete-line">증발하게 만든 주범</span>
         </div>
         <!-- 박민석 소개 -->
